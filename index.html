@@ -1,1 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HCC - Página principal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="HCC Recruitment Agency">
+                <span>Hiring Connect Company (HCC)</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="#vacantes">Vacantes</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#vacante1">Desarrollador de Software</a></li>
+                        <li><a href="#vacante2">Gerente de Proyectos</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#requisitos">Requisitos</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#requisito1">Nivel educativo</a></li>
+                        <li><a href="#requisito2">Edad</a></li>
+                        <li><a href="#requisito3">Experiencia comprobada</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#beneficios">Beneficios</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#beneficio1">Salario competitivo</a></li>
+                        <li><a href="#beneficio2">Prestaciones de ley</a></li>
+                        <li><a href="#beneficio3">Crecimiento profesional</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>
+                <span class="slogan-part1">Crecer es un proceso</span>
+                <span class="slogan-part2">Comienza ahora</span>
+            </h1>
+            <p>Únete a nosotros.</p>
+            <!-- Botones de Subir CV y Crear CV -->
+            <div class="aplicar-ahora">
+                <button id="btn-subir-cv">Subir CV</button>
+                <button id="btn-crear-cv">Crear CV</button>
+            </div>
+            <div id="info-container"></div>
+        </div>
+    </section>
+
+    <section id="vacantes" class="vacantes">
+        <h2>Vacantes disponibles</h2>
+        <div class="vacante-list">
+            <div id="vacante1" class="vacante-item">
+                <div class="vacante-header">
+                    <h3>Desarrollador de Software</h3>
+                    <span class="badge">Nuevo</span>
+                </div>
+                <div class="vacante-info">
+                    <p><strong>Ubicación:</strong> Toronto, Canadá</p>
+                    <p><strong>Salario:</strong> $70,000 - $90,000 anuales</p>
+                    <p><strong>Descripción:</strong> Buscamos un desarrollador de software con experiencia en tecnologías modernas como JavaScript, React y Node.js. El candidato ideal debe tener al menos 3 años de experiencia en desarrollo web.</p>
+                </div>
+                <div class="vacante-actions">
+                    <button class="btn-mas-info">Más información</button>
+                    <button class="btn-aplicar">Aplicar ahora</button>
+                </div>
+            </div>
+            <div id="vacante2" class="vacante-item">
+                <div class="vacante-header">
+                    <h3>Gerente de Proyectos</h3>
+                    <span class="badge">Nuevo</span>
+                </div>
+                <div class="vacante-info">
+                    <p><strong>Ubicación:</strong> Vancouver, Canadá</p>
+                    <p><strong>Salario:</strong> $80,000 - $100,000 anuales</p>
+                    <p><strong>Descripción:</strong> Estamos en busca de un gerente de proyectos con experiencia en metodologías ágiles y liderazgo de equipos multidisciplinarios. Se requiere certificación PMP y al menos 5 años de experiencia.</p>
+                </div>
+                <div class="vacante-actions">
+                    <button class="btn-mas-info">Más información</button>
+                    <button class="btn-aplicar">Aplicar ahora</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="requisitos" class="requisitos">
+        <h2>Requisitos</h2>
+        <div class="requisitos-list">
+            <div class="requisito-item">
+                <h3>Nivel educativo</h3>
+                <p>Licenciatura en áreas afines (Ingeniería, Tecnología, Administración).</p>
+            </div>
+            <div class="requisito-item">
+                <h3>Edad</h3>
+                <p>25 - 45 años.</p>
+            </div>
+            <div class="requisito-item">
+                <h3>Experiencia comprobada</h3>
+                <p>Mínimo 3 años en el área de interés.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="beneficios" class="beneficios">
+        <h2>Beneficios de trabajar con HCC</h2>
+        <div class="beneficios-list">
+            <div class="beneficio-item">
+                <h3>Salario competitivo</h3>
+                <p>Remuneración acorde a la experiencia y habilidades.</p>
+            </div>
+            <div class="beneficio-item">
+                <h3>Prestaciones de ley</h3>
+                <p>Seguro médico, vacaciones pagadas y bonos anuales.</p>
+            </div>
+            <div class="beneficio-item">
+                <h3>Oportunidades de crecimiento</h3>
+                <p>Programas de capacitación y desarrollo profesional.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+        <h2>Contacto</h2>
+        <div class="quienes-somos">
+            <h3>¿Quiénes somos?</h3>
+            <p>
+                Somos Hiring Connect Company (HCC), una agencia de reclutamiento especializada en conectar talento con oportunidades laborales. Nuestra misión es ayudarte a crecer profesionalmente y alcanzar tus metas. Recuerda que ninguna empresa puede pedirte dinero a cambio de una entrevista o un puesto.
+            </p>
+        </div>
+        <form id="contact-form">
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <textarea placeholder="Mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Modal para subir CV -->
+    <div id="modal-subir-cv" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Subir CV</h2>
+            <form id="formulario-subir-cv">
+                <div class="form-group">
+                    <label for="cv-hecho">Subir CV (PDF):</label>
+                    <input type="file" id="cv-hecho" accept=".pdf" required>
+                </div>
+                <button type="submit">Enviar CV</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal para crear CV -->
+    <div id="modal-crear-cv" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Crear CV</h2>
+            <form id="formulario-crear-cv">
+                <!-- Información personal -->
+                <div class="form-group">
+                    <label for="nombre-completo">Nombre completo:</label>
+                    <input type="text" id="nombre-completo" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" required>
+                </div>
+                <div class="form-group">
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" id="direccion" required>
+                </div>
+
+                <!-- Experiencia laboral -->
+                <div class="form-group">
+                    <label for="experiencia">Experiencia laboral:</label>
+                    <textarea id="experiencia" rows="4" required></textarea>
+                </div>
+
+                <!-- Educación -->
+                <div class="form-group">
+                    <label for="educacion">Educación:</label>
+                    <textarea id="educacion" rows="4" required></textarea>
+                </div>
+
+                <!-- Habilidades -->
+                <div class="form-group">
+                    <label for="habilidades">Habilidades:</label>
+                    <textarea id="habilidades" rows="4" required></textarea>
+                </div>
+
+                <!-- Idiomas -->
+                <div class="form-group">
+                    <label for="idiomas">Idiomas:</label>
+                    <textarea id="idiomas" rows="4" required></textarea>
+                </div>
+
+                <!-- Botón de enviar -->
+                <button type="submit">Enviar CV</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 HCC. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
