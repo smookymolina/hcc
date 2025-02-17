@@ -6,19 +6,21 @@ document.addEventListener('DOMContentLoaded', function () {
     const btnCrearCV = document.getElementById('btn-crear-cv');
     const closeModals = document.querySelectorAll('.modal .close');
 
-    // Verifica si los elementos existen antes de agregar eventos
+    // Abrir modal de Subir CV
     if (btnSubirCV && modalSubirCV) {
         btnSubirCV.addEventListener('click', () => {
             modalSubirCV.style.display = 'flex';
         });
     }
 
+    // Abrir modal de Crear CV
     if (btnCrearCV && modalCrearCV) {
         btnCrearCV.addEventListener('click', () => {
             modalCrearCV.style.display = 'flex';
         });
     }
 
+    // Cerrar modales
     closeModals.forEach(close => {
         close.addEventListener('click', () => {
             if (modalSubirCV) modalSubirCV.style.display = 'none';
@@ -26,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // Cerrar modales al hacer clic fuera
     window.addEventListener('click', (event) => {
         if (event.target === modalSubirCV || event.target === modalCrearCV) {
             if (modalSubirCV) modalSubirCV.style.display = 'none';
@@ -38,23 +41,13 @@ document.addEventListener('DOMContentLoaded', function () {
     if (formularioSubirCV) {
         formularioSubirCV.addEventListener('submit', function (event) {
             event.preventDefault();
-
-            // Obtener el archivo de CV
             const cvHecho = document.getElementById('cv-hecho').files[0];
-
-            // Validar que se haya subido un archivo
             if (!cvHecho) {
                 alert('Por favor, sube tu CV.');
                 return;
             }
-
-            // Mostrar la información en la consola (puedes enviarla a un servidor aquí)
             console.log('CV subido:', cvHecho.name);
-
-            // Cerrar el modal
-            if (modalSubirCV) modalSubirCV.style.display = 'none';
-
-            // Mostrar mensaje de éxito
+            modalSubirCV.style.display = 'none';
             alert('¡Tu CV ha sido enviado con éxito!');
         });
     }
@@ -64,36 +57,18 @@ document.addEventListener('DOMContentLoaded', function () {
     if (formularioCrearCV) {
         formularioCrearCV.addEventListener('submit', function (event) {
             event.preventDefault();
-
-            // Obtener los valores del formulario
-            const nombreCompleto = document.getElementById('nombre-completo').value;
-            const email = document.getElementById('email').value;
-            const telefono = document.getElementById('telefono').value;
-            const direccion = document.getElementById('direccion').value;
-            const experiencia = document.getElementById('experiencia').value;
-            const educacion = document.getElementById('educacion').value;
-            const habilidades = document.getElementById('habilidades').value;
-            const idiomas = document.getElementById('idiomas').value;
-
-            // Crear un objeto con la información del usuario
             const aplicacion = {
-                nombreCompleto,
-                email,
-                telefono,
-                direccion,
-                experiencia,
-                educacion,
-                habilidades,
-                idiomas,
+                nombreCompleto: document.getElementById('nombre-completo').value,
+                email: document.getElementById('email').value,
+                telefono: document.getElementById('telefono').value,
+                direccion: document.getElementById('direccion').value,
+                experiencia: document.getElementById('experiencia').value,
+                educacion: document.getElementById('educacion').value,
+                habilidades: document.getElementById('habilidades').value,
+                idiomas: document.getElementById('idiomas').value,
             };
-
-            // Mostrar la información en la consola (puedes enviarla a un servidor aquí)
             console.log('Aplicación enviada:', aplicacion);
-
-            // Cerrar el modal
-            if (modalCrearCV) modalCrearCV.style.display = 'none';
-
-            // Mostrar mensaje de éxito
+            modalCrearCV.style.display = 'none';
             alert('¡Tu CV ha sido creado y enviado con éxito!');
         });
     }
@@ -104,7 +79,6 @@ document.addEventListener('DOMContentLoaded', function () {
         botonesMasInfo.forEach(button => {
             button.addEventListener('click', function () {
                 alert('Mostrando más información sobre la vacante...');
-                // Aquí puedes agregar la lógica para mostrar más detalles.
             });
         });
     }
