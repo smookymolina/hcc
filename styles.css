@@ -25,7 +25,7 @@ header .logo {
 }
 
 header .logo img {
-    height: 90px;
+    height: 60px;
     width: auto;
 }
 
@@ -240,6 +240,36 @@ header .nav-links a:hover {
     background: #00b4d8;
 }
 
+/* Estilos para la información adicional */
+.info-adicional {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.info-adicional h4 {
+    font-size: 18px;
+    color: #0077b6;
+    margin-bottom: 10px;
+}
+
+.info-adicional ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.info-adicional ul li {
+    margin-bottom: 10px;
+}
+
+.info-adicional ul ul {
+    list-style-type: circle;
+    margin-left: 20px;
+}
+
 /* Sección de Requisitos */
 .requisitos {
     padding: 40px 20px;
@@ -273,16 +303,6 @@ header .nav-links a:hover {
 .requisito-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.requisito-item {
-    background: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    margin-bottom: 20px; /* Añade margen inferior si es necesario */
 }
 
 .requisito-item h3 {
@@ -350,35 +370,6 @@ header .nav-links a:hover {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.info-adicional {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #f9f9f9;
-    border: 1px solid #e0e0e0;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.info-adicional h4 {
-    font-size: 18px;
-    color: #0077b6;
-    margin-bottom: 10px;
-}
-
-.info-adicional ul {
-    list-style-type: disc;
-    margin-left: 20px;
-}
-
-.info-adicional ul li {
-    margin-bottom: 10px;
-}
-
-.info-adicional ul ul {
-    list-style-type: circle;
-    margin-left: 20px;
 }
 
 /* Sección de Contacto */
