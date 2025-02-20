@@ -59,10 +59,11 @@ document.addEventListener('DOMContentLoaded', function () {
             event.preventDefault();
             const aplicacion = {
                 nombreCompleto: document.getElementById('nombre-completo').value,
+                nacimiento: document.getElementById('nacimiento').value,
                 email: document.getElementById('email').value,
                 telefono: document.getElementById('telefono').value,
                 direccion: document.getElementById('direccion').value,
-                experiencia: document.getElementById('empleos').value,
+                experiencia: document.getElementById('experiencia').value,
                 educacion: document.getElementById('educacion').value,
                 habilidades: document.getElementById('habilidades').value,
             };
@@ -72,24 +73,24 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
- // Funcionalidad para los botones de "Más información"
-const botonesMasInfo = document.querySelectorAll('.btn-mas-info');
-if (botonesMasInfo) {
-    botonesMasInfo.forEach(button => {
-        button.addEventListener('click', function () {
-            // Encuentra el contenedor de información adicional más cercano
-            const infoAdicional = button.closest('.vacante-item').querySelector('.info-adicional');
-            if (infoAdicional) {
-                // Alternar la visibilidad del contenedor
-                if (infoAdicional.style.display === 'none' || infoAdicional.style.display === '') {
-                    infoAdicional.style.display = 'block';
-                } else {
-                    infoAdicional.style.display = 'none';
+    // Funcionalidad para los botones de "Más información"
+    const botonesMasInfo = document.querySelectorAll('.btn-mas-info');
+    if (botonesMasInfo) {
+        botonesMasInfo.forEach(button => {
+            button.addEventListener('click', function () {
+                // Encuentra el contenedor de información adicional más cercano
+                const infoAdicional = button.closest('.vacante-item').querySelector('.info-adicional');
+                if (infoAdicional) {
+                    // Alternar la visibilidad del contenedor
+                    if (infoAdicional.style.display === 'none' || infoAdicional.style.display === '') {
+                        infoAdicional.style.display = 'block';
+                    } else {
+                        infoAdicional.style.display = 'none';
+                    }
                 }
-            }
+            });
         });
-    });
-}
+    }
 
     // Funcionalidad para enviar el formulario de Calificaciones y Comentarios
     const formularioCalificacion = document.getElementById('formulario-calificacion');
