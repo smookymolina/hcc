@@ -421,6 +421,124 @@ header .nav-links a:hover {
     background: #00b4d8;
 }
 
+/* Sección de Calificaciones y Comentarios */
+.calificaciones {
+    padding: 40px 20px;
+    background: #ffffff;
+}
+
+.calificaciones h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #0077b6;
+}
+
+.calificaciones-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.calificacion-item {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.calificacion-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.calificacion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.calificacion-header h3 {
+    font-size: 20px;
+    color: #0077b6;
+    margin: 0;
+}
+
+.calificacion-estrellas {
+    font-size: 20px;
+    color: #ffd700; /* Color dorado para las estrellas */
+}
+
+.calificacion-info p {
+    font-size: 16px;
+    color: #555;
+    margin: 0;
+}
+
+#formulario-calificacion {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 40px auto 0;
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#formulario-calificacion h3 {
+    font-size: 24px;
+    color: #0077b6;
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+
+#formulario-calificacion .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#formulario-calificacion label {
+    font-size: 16px;
+    color: #333;
+}
+
+#formulario-calificacion input,
+#formulario-calificacion select,
+#formulario-calificacion textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#formulario-calificacion textarea {
+    resize: vertical;
+}
+
+#formulario-calificacion button {
+    background: #0077b6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+#formulario-calificacion button:hover {
+    background: #00b4d8;
+}
+
 /* Estilos para los modales */
 .modal {
     display: none;
