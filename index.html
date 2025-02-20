@@ -23,6 +23,23 @@
                         <li><a href="#vacante3">Auxiliar de recursos humanos</a></li>
                     </ul>
                 </li>
+                <li class="dropdown">
+                    <a href="#requisitos">Requisitos</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#requisito1">Nivel educativo</a></li>
+                        <li><a href="#requisito2">Edad</a></li>
+                        <li><a href="#requisito3">Experiencia comprobada</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#beneficios">Beneficios</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#beneficio1">Salario competitivo</a></li>
+                        <li><a href="#beneficio2">Prestaciones de ley</a></li>
+                        <li><a href="#beneficio3">Oportunidades de Crecimiento</a></li>
+                        <li><a href="#beneficio4">Bonos</a></li>
+                    </ul>
+                </li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
@@ -36,82 +53,245 @@
             </h1>
             <p>Únete a nosotros.</p>
             <div class="aplicar-ahora">
-                <!-- Botón "Subir CV" -->
-                <a href="https://formspree.io/f/xanqvonv?action=upload" target="_blank">
-                    <button id="btn-subir-cv">Subir CV</button>
-                </a>
-                <!-- Botón "Crear CV" -->
-                <a href="https://formspree.io/f/xanqvonv?action=create" target="_blank">
-                    <button id="btn-crear-cv">Crear CV</button>
-                </a>
+                <button id="btn-subir-cv">Subir CV</button>
+                <button id="btn-crear-cv">Crear CV</button>
             </div>
+            <div id="info-container"></div>
         </div>
     </section>
 
     <section id="vacantes" class="vacantes">
         <h2>Vacantes disponibles</h2>
-        <div class="vacante-list">
-            <!-- Vacante 1 -->
+        <div class="vacante-list">    
             <div id="vacante1" class="vacante-item">
-                <div class="vacante-header">
-                    <h3>Asesor de Telemarketing</h3>
-                    <span class="badge">Nuevo</span>
-                </div>
-                <div class="vacante-info">
-                    <p><strong>Ubicación:</strong> Hipódromo Condesa, CDMX</p>
-                    <p><strong>Salario:</strong> $6,000 - $8,000 mensuales</p>
-                    <p><strong>Descripción:</strong> Estamos en búsqueda de talento en Telemarketing que quieran unirse a una empresa enfocada, desde hace más de 5 años, a la atención al cliente.</p>
-                </div>
-                <div class="vacante-actions">
-                    <!-- Botón "Aplicar ahora" -->
-                    <a href="https://formspree.io/f/xanqvonv?action=create" target="_blank">
-                        <button class="btn-aplicar">Aplicar ahora</button>
-                    </a>
-                </div>
-            </div>
+    <div class="vacante-header">
+        <h3>Asesor de Telemarketing</h3>
+        <span class="badge">Nuevo</span>
+    </div>
+    <div class="vacante-info">
+        <p><strong>Ubicación:</strong> Hipódromo Condesa, CDMX</p>
+        <p><strong>Salario:</strong> $6,000 - $8,000 mensuales</p>
+        <p><strong>Descripción:</strong> Estamos en búsqueda de talento en Telemarketing que quieran unirse a una empresa enfocada, desde hace más de 5 años, a la atención al cliente. El asesor será responsable del perfilamiento y prospección de clientes potenciales, construyendo relaciones sólidas con los mismos y contribuyendo al crecimiento de nuestra cartera.</p>
+    </div>
+    <div class="vacante-actions">
+        <button class="btn-mas-info">Más información</button>
+        <button class="btn-aplicar">Aplicar ahora</button>
+    </div>
+</div>
 
-            <!-- Vacante 2 -->
-            <div id="vacante2" class="vacante-item">
-                <div class="vacante-header">
-                    <h3>Capturista de Datos</h3>
-                    <span class="badge">Nuevo</span>
-                </div>
-                <div class="vacante-info">
-                    <p><strong>Ubicación:</strong> Santa Fe, CDMX</p>
-                    <p><strong>Salario:</strong> $5,000 - $6,000 mensuales</p>
-                    <p><strong>Descripción:</strong> Estamos en busca de talento como capturista de datos, para garantizar la correcta captura y organización de información en bases de datos.</p>
-                </div>
-                <div class="vacante-actions">
-                    <!-- Botón "Aplicar ahora" -->
-                    <a href="https://formspree.io/f/xanqvonv?action=create" target="_blank">
-                        <button class="btn-aplicar">Aplicar ahora</button>
-                    </a>
-                </div>
-            </div>
+<div id="vacante2" class="vacante-item">
+    <div class="vacante-header">
+        <h3>Capturista de Datos</h3>
+        <span class="badge">Nuevo</span>
+    </div>
+    <div class="vacante-info">
+        <p><strong>Ubicación:</strong> Santa Fe, CDMX</p>
+        <p><strong>Salario:</strong> $5,000 - $6,000 mensuales</p>
+        <p><strong>Descripción:</strong> Estamos en busca de talento como capturista de datos, para garantizar la correcta captura y organización de información en bases de datos, asegurando la precisión y confidencialidad de los datos para contribuir al funcionamiento eficiente de los procesos internos de la empresa.</p>
+    </div>
+    <div class="vacante-actions">
+        <button class="btn-mas-info">Más información</button>
+        <button class="btn-aplicar">Aplicar ahora</button>
+    </div>
+</div>
 
-            <!-- Vacante 3 -->
-            <div id="vacante3" class="vacante-item">
-                <div class="vacante-header">
-                    <h3>Auxiliar de Recursos Humanos</h3>
-                    <span class="badge">Nuevo</span>
-                </div>
-                <div class="vacante-info">
-                    <p><strong>Ubicación:</strong> CDMX</p>
-                    <p><strong>Salario:</strong> $5,000 mensuales</p>
-                    <p><strong>Descripción:</strong> Buscamos apoyo en la gestión de procesos de reclutamiento y selección de personal.</p>
-                </div>
-                <div class="vacante-actions">
-                    <!-- Botón "Aplicar ahora" -->
-                    <a href="https://formspree.io/f/xanqvonv?action=create" target="_blank">
-                        <button class="btn-aplicar">Aplicar ahora</button>
-                    </a>
-                </div>
-            </div>
+<div id="vacante3" class="vacante-item">
+    <div class="vacante-header">
+        <h3>Auxiliar de Recursos Humanos</h3>
+        <span class="badge">Nuevo</span>
+    </div>
+    <div class="vacante-info">
+        <p><strong>Ubicación:</strong> CDMX</p>
+        <p><strong>Salario:</strong> $5,000 mensuales</p>
+        <p><strong>Descripción:</strong> Buscamos apoyo en la gestión de procesos de reclutamiento y selección de personal, elaboración, revisión de contratos laborales y documentación relacionada, atención y seguimiento a necesidades del personal, supervisión y organización de equipo de trabajo.</p>
+    </div>
+    <div class="vacante-actions">
+        <button class="btn-mas-info">Más información</button>
+        <button class="btn-aplicar">Aplicar ahora</button>
+    </div>
+</div>
+</div>
+    </section>
+
+    <section id="requisitos" class="requisitos">
+        <h2>Requisitos</h2>
+        <div class="requisitos-list">
+            <div class="requisito-item">
+    <h3>Nivel educativo</h3>
+    <p>Bachillerato concluido.</p>
+</div>
+<div class="requisito-item">
+    <h3>Edad</h3>
+    <p>18 - 25 años.</p>
+</div>
+<div class="requisito-item">
+    <h3>Experiencia comprobada</h3>
+    <p>6 meses a 1 año en el área.</p>
+</div>
+              <div class="requisito-item">
+    <h3>Habilidades</h3>
+    <p>Comunicación y negociación.</p>
+</div>
         </div>
     </section>
 
+    <section id="beneficios" class="beneficios">
+        <h2>Beneficios de trabajar con HCC</h2>
+        <div class="beneficios-list">
+            <div class="beneficio-item">
+                <h3>Salario competitivo</h3>
+                <p>Remuneración acorde a la experiencia y habilidades.</p>
+            </div>
+            <div class="beneficio-item">
+    <h3>Prestaciones de ley</h3>
+    <p>Seguro médico, vacaciones pagadas, etc.</p>
+</div>
+            <div class="beneficio-item">
+                <h3>Oportunidades de crecimiento</h3>
+                <p>Programas de capacitación y desarrollo profesional.</p>
+            </div>
+            <div class="beneficio-item bonos-adicionales">
+    <h3>Bonos adicionales</h3>
+    <p>Bonos por puntualidad y bonos por productividad.</p>
+</div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+        <h2>Contacto</h2>
+        <div class="quienes-somos">
+            <h3>¿Quiénes somos?</h3>
+            <p>
+                Somos Hiring Connect Company (HCC), una agencia de reclutamiento especializada en conectar talento con oportunidades laborales. Nuestra misión es ayudarte a crecer profesionalmente y alcanzar tus metas. Recuerda que ninguna empresa puede pedirte dinero a cambio de una entrevista o un puesto.
+            </p>
+        </div>
+        <form id="contact-form">
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <textarea placeholder="Mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Sección de Calificaciones y Comentarios -->
+<section id="calificaciones" class="calificaciones">
+    <h2>Calificaciones y Comentarios</h2>
+    <div class="calificaciones-list">
+        <div class="calificacion-item">
+            <div class="calificacion-header">
+                <h3>Juan Pérez</h3>
+                <span class="calificacion-estrellas">★★★★★</span>
+            </div>
+            <div class="calificacion-info">
+                <p>"Excelente servicio, me ayudaron a encontrar el trabajo perfecto para mí. ¡Muy recomendados!"</p>
+            </div>
+        </div>
+        <div class="calificacion-item">
+            <div class="calificacion-header">
+                <h3>María González</h3>
+                <span class="calificacion-estrellas">★★★★☆</span>
+            </div>
+            <div class="calificacion-info">
+                <p>"Buena atención, aunque el proceso de selección fue un poco largo. Gracias por la oportunidad."</p>
+            </div>
+        </div>
+        <div class="calificacion-item">
+            <div class="calificacion-header">
+                <h3>Carlos López</h3>
+                <span class="calificacion-estrellas">★★★★★</span>
+            </div>
+            <div class="calificacion-info">
+                <p>"Muy profesionales, me guiaron en todo momento. ¡Gracias HCC!"</p>
+            </div>
+        </div>
+    </div>
+    <form id="formulario-calificacion">
+        <h3>Deja tu calificación y comentario</h3>
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+        </div>
+        <div class="form-group">
+            <label for="calificacion">Calificación:</label>
+            <select id="calificacion" required>
+                <option value="5">★★★★★</option>
+                <option value="4">★★★★☆</option>
+                <option value="3">★★★☆☆</option>
+                <option value="2">★★☆☆☆</option>
+                <option value="1">★☆☆☆☆</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="comentario">Comentario:</label>
+            <textarea id="comentario" rows="4" required></textarea>
+        </div>
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+    <!-- Modal para subir CV -->
+    <div id="modal-subir-cv" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Subir CV</h2>
+            <form id="formulario-subir-cv">
+                <div class="form-group">
+                    <label for="cv-hecho">Subir CV (PDF):</label>
+                    <input type="file" id="cv-hecho" accept=".pdf" required>
+                </div>
+                <button type="submit">Enviar CV</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal para crear CV -->
+    <div id="modal-crear-cv" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Crear CV</h2>
+            <form id="formulario-crear-cv">
+                <div class="form-group">
+                    <label for="nombre-completo">Nombre completo:</label>
+                    <input type="text" id="nombre-completo" required>
+                </div>
+                <div class="form-group">
+                    <label for="nacimiento">Fecha de Nacimiento:</label>
+                    <input type="text" id="nacimiento" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" required>
+                </div>
+                <div class="form-group">
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" id="direccion" required>
+                </div>
+                <div class="form-group">
+                    <label for="experiencia">Experiencia laboral (Ultimos 2 trabajos):</label>
+                    <textarea id="experiencia" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="educacion">Educación:</label>
+                    <textarea id="educacion" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="habilidades">Habilidades:</label>
+                    <textarea id="habilidades" rows="4" required></textarea>
+                </div>
+                <button type="submit">Enviar CV</button>
+            </form>
+        </div>
+    </div>
+    
     <footer>
         <p>&copy; 2025 HCC. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="script.js"></script>
+    
 </body>
 </html>
