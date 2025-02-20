@@ -73,6 +73,43 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Funcionalidad para enviar el formulario de Calificaciones y Comentarios
+const formularioCalificacion = document.getElementById('formulario-calificacion');
+if (formularioCalificacion) {
+    formularioCalificacion.addEventListener('submit', function (event) {
+        event.preventDefault();
+        const nombre = document.getElementById('nombre').value;
+        const calificacion = document.getElementById('calificacion').value;
+        const comentario = document.getElementById('comentario').value;
+
+        // Crear un nuevo elemento de calificación
+        const nuevaCalificacion = document.createElement('div');
+        nuevaCalificacion.classList.add('calificacion-item');
+
+        const calificacionHeader = document.createElement('div');
+        calificacionHeader.classList.add('calificacion-header');
+        calificacionHeader.innerHTML = `
+            <h3>${nombre}</h3>
+            <span class="calificacion-estrellas">${'★'.repeat(calificacion)}${'☆'.repeat(5 - calificacion)}</span>
+        `;
+
+        const calificacionInfo = document.createElement('div');
+        calificacionInfo.classList.add('calificacion-info');
+        calificacionInfo.innerHTML = `<p>"${comentario}"</p>`;
+
+        nuevaCalificacion.appendChild(calificacionHeader);
+        nuevaCalificacion.appendChild(calificacionInfo);
+
+        // Agregar la nueva calificación a la lista
+        const calificacionesList = document.querySelector('.calificaciones-list');
+        calificacionesList.prepend(nuevaCalificacion);
+
+        // Limpiar el formulario
+        formularioCalificacion.reset();
+        alert('¡Gracias por tu calificación y comentario!');
+    });
+}
+
     // Funcionalidad para los botones de "Más información"
     const botonesMasInfo = document.querySelectorAll('.btn-mas-info');
     if (botonesMasInfo) {
