@@ -70,6 +70,25 @@ if (botonesMasInfo) {
         });
     });
 }
+
+    // Funcionalidad para los botones de "Más información"
+const botonesMasInfo = document.querySelectorAll('.btn-mas-info');
+if (botonesMasInfo) {
+    botonesMasInfo.forEach(button => {
+        button.addEventListener('click', function () {
+            // Encuentra el contenedor de información adicional más cercano
+            const infoAdicional = button.closest('.vacante-item').querySelector('.info-adicional');
+            if (infoAdicional) {
+                // Alternar la visibilidad del contenedor
+                if (infoAdicional.style.display === 'none' || infoAdicional.style.display === '') {
+                    infoAdicional.style.display = 'block';
+                } else {
+                    infoAdicional.style.display = 'none';
+                }
+            }
+        });
+    });
+}
     // Funcionalidad para enviar el formulario de Crear CV
     const formularioCrearCV = document.getElementById('formulario-crear-cv');
     if (formularioCrearCV) {
