@@ -112,14 +112,32 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Funcionalidad para enviar el formulario de Calificaciones y Comentarios
-    const formularioCalificacion = document.getElementById('formulario-calificacion');
-    if (formularioCalificacion) {
-        formularioCalificacion.addEventListener('submit', function (event) {
-            event.preventDefault();
-            const nombre = document.getElementById('nombre').value;
-            const calificacion = document.getElementById('calificacion').value;
-            const comentario = document.getElementById('comentario').value;
+const formularioCalificacion = document.getElementById('formulario-calificacion');
+if (formularioCalificacion) {
+    formularioCalificacion.addEventListener('submit', function (event) {
+        event.preventDefault();
 
+        // Obtén los datos del formulario
+        const nombre = document.getElementById('nombre').value;
+        const email = document.getElementById('email').value;
+        const calificacion = document.getElementById('calificacion').value;
+        const comentario = document.getElementById('comentario').value;
+
+        // Envía los datos a Formspree usando Fetch API
+        fetch('https://formspree.io/f/mjkgdrop', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                nombre: nombre,
+                email: email,
+                calificacion: calificacion,
+                comentario: comentario,
+            }),
+        })
+        .then(response => response.json())
+        .then(data => {
             // Crear un nuevo elemento de calificación
             const nuevaCalificacion = document.createElement('div');
             nuevaCalificacion.classList.add('calificacion-item');
@@ -145,6 +163,10 @@ document.addEventListener('DOMContentLoaded', function () {
             // Limpiar el formulario
             formularioCalificacion.reset();
             alert('¡Gracias por tu calificación y comentario!');
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Hubo un error al enviar tu calificación. Por favor, inténtalo de nuevo.');
         });
-    }
-});
+    });
+}
