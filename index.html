@@ -516,6 +516,80 @@
             </div>
         </div>
     </div>
+</section><section id="calificaciones" class="calificaciones">
+    <h2>Calificaciones y Comentarios</h2>
+    <form id="formulario-calificaciones">
+        <div class="form-group">
+            <label for="nombre-calificacion">Nombre:</label>
+            <input type="text" id="nombre-calificacion" name="nombre" placeholder="Tu nombre" required>
+        </div>
+        <div class="form-group">
+            <label for="email-calificacion">Correo electrónico:</label>
+            <input type="email" id="email-calificacion" name="email" placeholder="Tu correo electrónico" required>
+        </div>
+        <div class="form-group">
+            <label for="calificacion">Calificación:</label>
+            <div class="estrellas">
+                <span class="estrella" data-value="1">&#9733;</span>
+                <span class="estrella" data-value="2">&#9733;</span>
+                <span class="estrella" data-value="3">&#9733;</span>
+                <span class="estrella" data-value="4">&#9733;</span>
+                <span class="estrella" data-value="5">&#9733;</span>
+            </div>
+            <input type="hidden" id="calificacion" name="calificacion" required>
+        </div>
+        <div class="form-group">
+            <label for="comentario">Comentario:</label>
+            <textarea id="comentario" name="comentario" placeholder="Escribe tu comentario aquí..." required></textarea>
+        </div>
+        <button type="submit" class="btn-enviar">Enviar</button>
+    </form>
+    <div id="mensaje-exito" class="mensaje-exito">
+        ¡Gracias por tu calificación y comentario!
+    </div>
+
+    <!-- Ejemplos de comentarios estilo red social -->
+    <div class="comentarios-ejemplo">
+        <h3>Comentarios recientes</h3>
+        <div class="comentario-item">
+            <div class="comentario-header">
+                <img src="images/muusu.png" alt="Avatar" class="avatar">
+                <div class="comentario-info">
+                    <span class="nombre">María González</span>
+                    <span class="fecha">Hace 2 horas</span>
+                </div>
+            </div>
+            <div class="comentario-body">
+                <div class="estrellas">
+                    <span class="estrella active">&#9733;</span>
+                    <span class="estrella active">&#9733;</span>
+                    <span class="estrella active">&#9733;</span>
+                    <span class="estrella active">&#9733;</span>
+                    <span class="estrella active">&#9733;</span>
+                </div>
+                <p class="comentario-texto">Excelente servicio, muy profesionales y atentos. ¡Los recomiendo!</p>
+            </div>
+        </div>
+        <div class="comentario-item">
+            <div class="comentario-header">
+                <img src="images/homusu.png" alt="Avatar" class="avatar">
+                <div class="comentario-info">
+                    <span class="nombre">Carlos Martínez</span>
+                    <span class="fecha">Hace 1 día</span>
+                </div>
+            </div>
+            <div class="comentario-body">
+                <div class="estrellas">
+                    <span class="estrella active">&#9733;</span>
+                    <span class="estrella active">&#9733;</span>
+                    <span class="estrella active">&#9733;</span>
+                    <span class="estrella active">&#9733;</span>
+                    <span class="estrella">&#9733;</span>
+                </div>
+                <p class="comentario-texto">Muy buena experiencia, aunque el tiempo de espera fue un poco largo.</p>
+            </div>
+        </div>
+    </div>
 </section>
     
     <section id="contacto" class="contacto">
