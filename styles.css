@@ -1,163 +1,3 @@
-/* Estilos para los comentarios de ejemplo */
-.comentarios-ejemplo {
-    margin-top: 40px;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.comentarios-ejemplo h3 {
-    font-size: 24px;
-    color: #0077b6;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.comentario-item {
-    background: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    padding: 15px;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.comentario-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.comentario-header .avatar {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.comentario-header .comentario-info {
-    display: flex;
-    flex-direction: column;
-}
-
-.comentario-header .nombre {
-    font-size: 18px;
-    font-weight: bold;
-    color: #0077b6;
-}
-
-.comentario-header .fecha {
-    font-size: 14px;
-    color: #777;
-}
-
-.comentario-body {
-    margin-left: 60px; /* Para alinear con el avatar */
-}
-
-.comentario-body .estrellas {
-    display: flex;
-    gap: 5px;
-    margin-bottom: 10px;
-}
-
-.comentario-body .estrella {
-    font-size: 18px;
-    color: #ccc;
-}
-
-.comentario-body .estrella.active {
-    color: #ffd700; /* Color dorado para las estrellas activas */
-}
-
-.comentario-texto {
-    font-size: 16px;
-    color: #555;
-    margin: 0;
-}
-
-/* Estilos para la sección de Calificaciones y Comentarios */
-.calificaciones {
-    padding: 40px 20px;
-    background: #ffffff;
-    border-top: 1px solid #e0e0e0;
-}
-
-.calificaciones h2 {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 40px;
-    color: #0077b6;
-}
-
-#formulario-calificaciones {
-    max-width: 600px;
-    margin: 0 auto;
-    background: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-#formulario-calificaciones .form-group {
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-#formulario-calificaciones label {
-    display: block;
-    font-size: 16px;
-    color: #0077b6;
-    margin-bottom: 5px;
-}
-
-#formulario-calificaciones input,
-#formulario-calificaciones textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    color: #333;
-}
-
-#formulario-calificaciones textarea {
-    resize: vertical;
-    min-height: 150px;
-}
-
-#formulario-calificaciones .btn-enviar {
-    background: #0077b6;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-#formulario-calificaciones .btn-enviar:hover {
-    background: #00b4d8;
-}
-
-.estrellas {
-    display: flex;
-    gap: 5px;
-    margin-bottom: 10px;
-}
-
-.estrellas .estrella {
-    font-size: 24px;
-    color: #ccc;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-.estrellas .estrella:hover,
-.estrellas .estrella.active {
-    color: #ffd700; /* Color dorado para las estrellas seleccionadas */
-}
 /* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
@@ -345,69 +185,12 @@ header .nav-links a:hover {
     color: #333;
 }
 
-/* Estilos para el modal */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.modal-content {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 500px;
-    position: relative;
-}
-
-.modal-content .close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    cursor: pointer;
-    color: #333;
-}
-/* Estilos para el modal */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.modal-content {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 500px;
-    max-height: 80vh; /* Altura máxima del modal */
-    overflow-y: auto; /* Habilitar barra de desplazamiento vertical */
-    position: relative;
-    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
-}
-
 /* Estilos para el formulario dentro del modal */
 .modal-content form {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    padding-right: 10px; /* Espacio para la barra de desplazamiento */
+    padding-right: 10px;
 }
 
 .modal-content .form-group {
@@ -432,13 +215,13 @@ header .nav-links a:hover {
     color: #333;
     background: #f9f9f9;
     transition: border-color 0.3s;
-    width: 100%; /* Asegura que los campos no excedan el ancho del modal */
-    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .modal-content textarea {
-    resize: vertical; /* Permite redimensionar verticalmente */
-    min-height: 100px; /* Altura mínima */
+    resize: vertical;
+    min-height: 100px;
 }
 
 .modal-content .btn-enviar {
@@ -458,134 +241,23 @@ header .nav-links a:hover {
 
 /* Personalizar la barra de desplazamiento */
 .modal-content::-webkit-scrollbar {
-    width: 10px; /* Ancho de la barra de desplazamiento */
+    width: 10px;
 }
 
 .modal-content::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Color de fondo de la barra de desplazamiento */
+    background: #f1f1f1;
     border-radius: 5px;
 }
 
 .modal-content::-webkit-scrollbar-thumb {
-    background: #0077b6; /* Color de la barra de desplazamiento (azul) */
+    background: #0077b6;
     border-radius: 5px;
 }
 
 .modal-content::-webkit-scrollbar-thumb:hover {
-    background: #00b4d8; /* Color de la barra de desplazamiento al pasar el mouse */
-}
-/* Estilos para el formulario */
-#formulario-subir-cv {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-#formulario-subir-cv .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-#formulario-subir-cv label {
-    font-size: 16px;
-    color: #0077b6;
-    font-weight: bold;
-}
-
-#formulario-subir-cv input,
-#formulario-subir-cv textarea,
-#formulario-subir-cv select {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    color: #333;
-    background: #f9f9f9;
-    transition: border-color 0.3s;
-}
-
-#formulario-subir-cv input:focus,
-#formulario-subir-cv textarea:focus,
-#formulario-subir-cv select:focus {
-    border-color: #0077b6;
-    outline: none;
-}
-
-#formulario-subir-cv .btn-enviar {
-    background: #0077b6;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-#formulario-subir-cv .btn-enviar:hover {
     background: #00b4d8;
 }
 
-/* Estilos para el modal de Crear CV */
-#modal-crear-cv .modal-content {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 600px; /* Un poco más ancho para acomodar más campos */
-    position: relative;
-}
-
-#modal-crear-cv .form-group {
-    margin-bottom: 15px;
-}
-
-#modal-crear-cv label {
-    font-size: 16px;
-    color: #0077b6;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
-}
-
-#modal-crear-cv input,
-#modal-crear-cv textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    color: #333;
-    background: #f9f9f9;
-    transition: border-color 0.3s;
-}
-
-#modal-crear-cv textarea {
-    resize: vertical;
-    min-height: 100px;
-}
-
-#modal-crear-cv input:focus,
-#modal-crear-cv textarea:focus {
-    border-color: #0077b6;
-    outline: none;
-}
-
-#modal-crear-cv .btn-enviar {
-    background: #0077b6;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-#modal-crear-cv .btn-enviar:hover {
-    background: #00b4d8;
-}
 /* Sección de Vacantes */
 .vacantes {
     padding: 40px 20px;
@@ -680,7 +352,7 @@ header .nav-links a:hover {
     border: 1px solid #e0e0e0;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: none; /* Oculto por defecto */
+    display: none;
 }
 
 .info-adicional ul {
@@ -789,8 +461,8 @@ header .nav-links a:hover {
 }
 
 .beneficio-item.bonos-adicionales {
-    background: #e3f2fd; /* Fondo azul claro */
-    border: 2px solid #0077b6; /* Borde azul */
+    background: #e3f2fd;
+    border: 2px solid #0077b6;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -888,4 +560,41 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    header .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .slogan-part1 {
+        font-size: 40px;
+    }
+
+    .slogan-part2 {
+        font-size: 30px;
+    }
+
+    .aplicar-ahora {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .modal-content {
+        width: 95%;
+    }
+
+    .comentarios-ejemplo {
+        padding: 10px;
+    }
+
+    .comentario-body {
+        margin-left: 0;
+    }
 }
