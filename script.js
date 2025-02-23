@@ -1,15 +1,27 @@
 // Manejo del formulario de subir CV
 const formularioSubirCV = document.getElementById("formulario-subir-cv");
-const modalSubirCV = document.getElementById("modal-subir-cv");
-
 if (formularioSubirCV) {
     formularioSubirCV.addEventListener("submit", function (event) {
-        event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+        event.preventDefault();
+
+        // Validar el formato del archivo
+        const fileInput = document.getElementById("archivo-cv");
+        const file = fileInput.files[0];
+        if (file && !file.type.includes('pdf')) {
+            alert("Por favor, sube solo archivos PDF.");
+            return;
+        }
+
+        // Validar el tamaño del archivo (máximo 5MB)
+        if (file && file.size > 5 * 1024 * 1024) {
+            alert("El archivo es demasiado grande. Por favor, sube un archivo menor a 5MB.");
+            return;
+        }
 
         // Obtener los datos del formulario
         const formData = new FormData(formularioSubirCV);
 
-        // Enviar los datos a Formspree usando Fetch API
+        // Enviar los datos a Formspree
         fetch("https://formspree.io/f/mkgoabpj", {
             method: "POST",
             body: formData,
@@ -20,8 +32,8 @@ if (formularioSubirCV) {
             .then((response) => {
                 if (response.ok) {
                     alert("¡CV enviado con éxito!");
-                    formularioSubirCV.reset(); // Limpiar el formulario
-                    modalSubirCV.style.display = "none"; // Cerrar el modal
+                    formularioSubirCV.reset();
+                    modalSubirCV.style.display = "none";
                 } else {
                     alert("Hubo un error al enviar el CV. Inténtalo de nuevo.");
                 }
