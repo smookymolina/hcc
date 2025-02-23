@@ -269,6 +269,66 @@ header .nav-links a:hover {
 #formulario-subir-cv .btn-enviar:hover {
     background: #00b4d8;
 }
+
+/* Estilos para el modal de Crear CV */
+#modal-crear-cv .modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px; /* Un poco más ancho para acomodar más campos */
+    position: relative;
+}
+
+#modal-crear-cv .form-group {
+    margin-bottom: 15px;
+}
+
+#modal-crear-cv label {
+    font-size: 16px;
+    color: #0077b6;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#modal-crear-cv input,
+#modal-crear-cv textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    background: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+#modal-crear-cv textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#modal-crear-cv input:focus,
+#modal-crear-cv textarea:focus {
+    border-color: #0077b6;
+    outline: none;
+}
+
+#modal-crear-cv .btn-enviar {
+    background: #0077b6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#modal-crear-cv .btn-enviar:hover {
+    background: #00b4d8;
+}
 /* Sección de Vacantes */
 .vacantes {
     padding: 40px 20px;
