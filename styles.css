@@ -155,7 +155,7 @@ header .nav-links a:hover {
 
 /* Estilos para el modal */
 .modal {
-    display: none; /* Oculto por defecto */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -191,6 +191,7 @@ header .nav-links a:hover {
     margin-bottom: 20px;
     text-align: center;
 }
+
 /* Estilos para el formulario de subir CV */
 #formulario-subir-cv {
     display: flex;
@@ -242,22 +243,6 @@ header .nav-links a:hover {
 
 #formulario-subir-cv .btn-enviar:hover {
     background: #00b4d8;
-}
-/* Estilos adicionales para el input de nombre */
-#formulario-subir-cv input[type="text"] {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    color: #333;
-    background: #f9f9f9;
-    transition: border-color 0.3s;
-    width: 100%;
-}
-
-#formulario-subir-cv input[type="text"]:focus {
-    border-color: #0077b6;
-    outline: none;
 }
 
 /* Sección de Vacantes */
