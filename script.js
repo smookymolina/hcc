@@ -153,7 +153,6 @@ window.addEventListener("click", function (event) {
         modalCrearCV.style.display = "none";
     }
 });
-
 // Manejo del formulario de Crear CV
 const formularioCrearCV = document.getElementById("formulario-crear-cv");
 if (formularioCrearCV) {
