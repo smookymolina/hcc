@@ -184,14 +184,6 @@ header .nav-links a:hover {
     cursor: pointer;
     color: #333;
 }
-
-.modal-content h2 {
-    font-size: 24px;
-    color: #0077b6;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
 /* Estilos para el formulario de subir CV */
 #formulario-subir-cv {
     display: flex;
