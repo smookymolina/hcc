@@ -1,4 +1,37 @@
+// Manejo del formulario de subir CV
+const formularioSubirCV = document.getElementById("formulario-subir-cv");
+const modalSubirCV = document.getElementById("modal-subir-cv");
 
+if (formularioSubirCV) {
+    formularioSubirCV.addEventListener("submit", function (event) {
+        event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+
+        // Obtener los datos del formulario
+        const formData = new FormData(formularioSubirCV);
+
+        // Enviar los datos a Formspree usando Fetch API
+        fetch("https://formspree.io/f/mkgoabpj", {
+            method: "POST",
+            body: formData,
+            headers: {
+                Accept: "application/json",
+            },
+        })
+            .then((response) => {
+                if (response.ok) {
+                    alert("¡CV enviado con éxito!");
+                    formularioSubirCV.reset(); // Limpiar el formulario
+                    modalSubirCV.style.display = "none"; // Cerrar el modal
+                } else {
+                    alert("Hubo un error al enviar el CV. Inténtalo de nuevo.");
+                }
+            })
+            .catch((error) => {
+                console.error("Error:", error);
+                alert("Hubo un error al enviar el CV. Inténtalo de nuevo.");
+            });
+    });
+}
 
 // Funcionalidad para los botones de "Más información"
 const botonesMasInfo = document.querySelectorAll(".btn-mas-info");
