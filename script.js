@@ -57,19 +57,28 @@ document.addEventListener('DOMContentLoaded', function () {
     if (formularioCrearCV) {
         formularioCrearCV.addEventListener('submit', function (event) {
             event.preventDefault();
-            const aplicacion = {
-                nombreCompleto: document.getElementById('nombre-completo').value,
-                nacimiento: document.getElementById('nacimiento').value,
-                email: document.getElementById('email').value,
-                telefono: document.getElementById('telefono').value,
-                direccion: document.getElementById('direccion').value,
-                experiencia: document.getElementById('experiencia').value,
-                educacion: document.getElementById('educacion').value,
-                habilidades: document.getElementById('habilidades').value,
-            };
-            console.log('Aplicación enviada:', aplicacion);
-            modalCrearCV.style.display = 'none';
-            alert('¡Tu CV ha sido creado y enviado con éxito!');
+
+            // Obtén los datos del formulario
+            const formData = new FormData(formularioCrearCV);
+
+            // Envía los datos a Formspree usando Fetch API
+            fetch('https://formspree.io/f/mjkgdrop', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json',
+                },
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('¡Tu CV ha sido enviado con éxito!');
+                formularioCrearCV.reset(); // Limpia el formulario
+                modalCrearCV.style.display = 'none'; // Cierra el modal
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Hubo un error al enviar tu CV. Por favor, inténtalo de nuevo.');
+            });
         });
     }
 
