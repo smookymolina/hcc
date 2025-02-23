@@ -1,3 +1,175 @@
+/* Estilos para la sección de Calificaciones y Comentarios */
+.calificaciones {
+    padding: 40px 20px;
+    background: #ffffff;
+    border-top: 1px solid #e0e0e0;
+}
+
+.calificaciones h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #0077b6;
+}
+
+#formulario-calificaciones {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#formulario-calificaciones .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+#formulario-calificaciones label {
+    display: block;
+    font-size: 16px;
+    color: #0077b6;
+    margin-bottom: 5px;
+}
+
+#formulario-calificaciones input,
+#formulario-calificaciones textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+#formulario-calificaciones textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+#formulario-calificaciones .btn-enviar {
+    background: #0077b6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#formulario-calificaciones .btn-enviar:hover {
+    background: #00b4d8;
+}
+
+.estrellas {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.estrellas .estrella {
+    font-size: 24px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.estrellas .estrella:hover,
+.estrellas .estrella.active {
+    color: #ffd700; /* Color dorado para las estrellas seleccionadas */
+}
+
+/* Estilos para los comentarios estilo red social */
+.comentarios-ejemplo {
+    margin-top: 40px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.comentarios-ejemplo h3 {
+    font-size: 24px;
+    color: #0077b6;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.comentario-item {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comentario-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.comentario-header .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover; /* Asegura que la imagen se ajuste correctamente */
+}
+
+.comentario-header .comentario-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.comentario-header .nombre {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0077b6;
+}
+
+.comentario-header .fecha {
+    font-size: 14px;
+    color: #777;
+}
+
+.comentario-body {
+    margin-left: 60px; /* Para alinear con el avatar */
+}
+
+.comentario-body .estrellas {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.comentario-body .estrella {
+    font-size: 18px;
+    color: #ccc;
+}
+
+.comentario-body .estrella.active {
+    color: #ffd700; /* Color dorado para las estrellas activas */
+}
+
+.comentario-texto {
+    font-size: 16px;
+    color: #555;
+    margin: 0;
+}
+
+/* Mensaje de éxito */
+#mensaje-exito {
+    background: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+    display: none;
+}
 /* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
