@@ -52,34 +52,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Funcionalidad para enviar el formulario de Crear CV
-    const formularioCrearCV = document.getElementById('formulario-crear-cv');
-    if (formularioCrearCV) {
-        formularioCrearCV.addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            // Obtén los datos del formulario
-            const formData = new FormData(formularioCrearCV);
-
-            // Envía los datos a Formspree usando Fetch API
-            fetch('https://formspree.io/f/mjkgdrop', {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json',
-                },
-            })
-            .then(response => response.json())
-            .then(data => {
-                alert('¡Tu CV ha sido enviado con éxito!');
-                formularioCrearCV.reset(); // Limpia el formulario
-                modalCrearCV.style.display = 'none'; // Cierra el modal
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('Hubo un error al enviar tu CV. Por favor, inténtalo de nuevo.');
-            });
-        });
     }
 
     // Funcionalidad para los botones de "Más información"
