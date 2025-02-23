@@ -232,13 +232,68 @@ header .nav-links a:hover {
 
 .modal-content {
     background: white;
-    padding: 30px;
+    padding: 20px;
     border-radius: 10px;
     width: 90%;
     max-width: 500px;
     max-height: 80vh; /* Altura máxima del modal */
     overflow-y: auto; /* Habilitar barra de desplazamiento vertical */
     position: relative;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+/* Estilos para el formulario dentro del modal */
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-right: 10px; /* Espacio para la barra de desplazamiento */
+}
+
+.modal-content .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.modal-content label {
+    font-size: 16px;
+    color: #0077b6;
+    font-weight: bold;
+}
+
+.modal-content input,
+.modal-content textarea,
+.modal-content select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    background: #f9f9f9;
+    transition: border-color 0.3s;
+    width: 100%; /* Asegura que los campos no excedan el ancho del modal */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+.modal-content textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+    min-height: 100px; /* Altura mínima */
+}
+
+.modal-content .btn-enviar {
+    background: #0077b6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.modal-content .btn-enviar:hover {
+    background: #00b4d8;
 }
 
 /* Personalizar la barra de desplazamiento */
@@ -258,15 +313,6 @@ header .nav-links a:hover {
 
 .modal-content::-webkit-scrollbar-thumb:hover {
     background: #00b4d8; /* Color de la barra de desplazamiento al pasar el mouse */
-}
-
-.modal-content .close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    cursor: pointer;
-    color: #333;
 }
 /* Estilos para el formulario */
 #formulario-subir-cv {
