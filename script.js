@@ -1,4 +1,4 @@
-// Obtener referencias a los elementos del DOM
+// Manejo del modal de subir CV
 const btnSubirCV = document.getElementById("btn-subir-cv");
 const modalSubirCV = document.getElementById("modal-subir-cv");
 const closeModal = document.querySelector(".close");
@@ -108,39 +108,6 @@ document.addEventListener("click", function (event) {
     });
 });
 
-// Manejo del formulario de subir CV
-const formularioSubirCV = document.getElementById("formulario-subir-cv");
-if (formularioSubirCV) {
-    formularioSubirCV.addEventListener("submit", function (event) {
-        event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
-
-        // Obtener los datos del formulario
-        const formData = new FormData(formularioSubirCV);
-
-        // Enviar los datos a Formspree usando Fetch API
-        fetch("https://formspree.io/f/mkgoabpj", {
-            method: "POST",
-            body: formData,
-            headers: {
-                Accept: "application/json",
-            },
-        })
-            .then((response) => {
-                if (response.ok) {
-                    alert("¡CV enviado con éxito!");
-                    formularioSubirCV.reset(); // Limpiar el formulario
-                    modalSubirCV.style.display = "none"; // Cerrar el modal
-                } else {
-                    alert("Hubo un error al enviar el CV. Inténtalo de nuevo.");
-                }
-            })
-            .catch((error) => {
-                console.error("Error:", error);
-                alert("Hubo un error al enviar el CV. Inténtalo de nuevo.");
-            });
-    });
-}
-
 // Manejo del formulario de contacto
 const formularioContacto = document.querySelector(".formulario-contacto");
 if (formularioContacto) {
@@ -169,38 +136,6 @@ if (formularioContacto) {
             .catch((error) => {
                 console.error("Error:", error);
                 alert("Hubo un error al enviar el mensaje. Inténtalo de nuevo.");
-            });
-    });
-}
-
-// Manejo del formulario de calificaciones
-const formularioCalificacion = document.getElementById("formulario-calificacion");
-if (formularioCalificacion) {
-    formularioCalificacion.addEventListener("submit", function (event) {
-        event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
-
-        // Obtener los datos del formulario
-        const formData = new FormData(formularioCalificacion);
-
-        // Enviar los datos a Formspree usando Fetch API
-        fetch("https://formspree.io/f/xnnjyvzg", {
-            method: "POST",
-            body: formData,
-            headers: {
-                Accept: "application/json",
-            },
-        })
-            .then((response) => {
-                if (response.ok) {
-                    alert("¡Calificación enviada con éxito!");
-                    formularioCalificacion.reset(); // Limpiar el formulario
-                } else {
-                    alert("Hubo un error al enviar la calificación. Inténtalo de nuevo.");
-                }
-            })
-            .catch((error) => {
-                console.error("Error:", error);
-                alert("Hubo un error al enviar la calificación. Inténtalo de nuevo.");
             });
     });
 }
