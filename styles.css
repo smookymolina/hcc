@@ -158,6 +158,13 @@
 .estrellas .estrella.active {
     color: #ffd700; /* Color dorado para las estrellas seleccionadas */
 }
+
+.mensaje-exito {
+    text-align: center;
+    color: #0077b6;
+    font-size: 18px;
+    margin-top: 20px;
+}
 /* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
