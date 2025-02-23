@@ -1,49 +1,25 @@
-// Manejo del formulario de subir CV
-const formularioSubirCV = document.getElementById("formulario-subir-cv");
-if (formularioSubirCV) {
-    formularioSubirCV.addEventListener("submit", function (event) {
-        event.preventDefault();
+// Manejo del modal Subir CV
+const modalSubirCV = document.getElementById("modal-subir-cv");
+const btnSubirCV = document.getElementById("btn-subir-cv");
+const spanClose = document.getElementsByClassName("close")[0];
 
-        // Validar el formato del archivo
-        const fileInput = document.getElementById("archivo-cv");
-        const file = fileInput.files[0];
-        if (file && !file.type.includes('pdf')) {
-            alert("Por favor, sube solo archivos PDF.");
-            return;
-        }
+// Abrir modal al hacer clic en el botón "Subir CV"
+btnSubirCV.onclick = function () {
+    modalSubirCV.style.display = "flex";
+};
 
-        // Validar el tamaño del archivo (máximo 5MB)
-        if (file && file.size > 5 * 1024 * 1024) {
-            alert("El archivo es demasiado grande. Por favor, sube un archivo menor a 5MB.");
-            return;
-        }
+// Cerrar modal al hacer clic en la "X"
+spanClose.onclick = function () {
+    modalSubirCV.style.display = "none";
+};
 
-        // Obtener los datos del formulario
-        const formData = new FormData(formularioSubirCV);
+// Cerrar modal al hacer clic fuera del contenido
+window.onclick = function (event) {
+    if (event.target == modalSubirCV) {
+        modalSubirCV.style.display = "none";
+    }
+};
 
-        // Enviar los datos a Formspree
-        fetch("https://formspree.io/f/mkgoabpj", {
-            method: "POST",
-            body: formData,
-            headers: {
-                Accept: "application/json",
-            },
-        })
-            .then((response) => {
-                if (response.ok) {
-                    alert("¡CV enviado con éxito!");
-                    formularioSubirCV.reset();
-                    modalSubirCV.style.display = "none";
-                } else {
-                    alert("Hubo un error al enviar el CV. Inténtalo de nuevo.");
-                }
-            })
-            .catch((error) => {
-                console.error("Error:", error);
-                alert("Hubo un error al enviar el CV. Inténtalo de nuevo.");
-            });
-    });
-}
 // Funcionalidad para los botones de "Más información"
 const botonesMasInfo = document.querySelectorAll(".btn-mas-info");
 if (botonesMasInfo) {
