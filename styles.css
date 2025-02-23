@@ -23,9 +23,20 @@
 
 .comentario-header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
+}
+
+.comentario-header .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.comentario-header .comentario-info {
+    display: flex;
+    flex-direction: column;
 }
 
 .comentario-header .nombre {
@@ -34,17 +45,27 @@
     color: #0077b6;
 }
 
-.comentario-header .estrellas {
-    display: flex;
-    gap: 5px;
+.comentario-header .fecha {
+    font-size: 14px;
+    color: #777;
 }
 
-.comentario-header .estrella {
+.comentario-body {
+    margin-left: 60px; /* Para alinear con el avatar */
+}
+
+.comentario-body .estrellas {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.comentario-body .estrella {
     font-size: 18px;
     color: #ccc;
 }
 
-.comentario-header .estrella.active {
+.comentario-body .estrella.active {
     color: #ffd700; /* Color dorado para las estrellas activas */
 }
 
@@ -53,6 +74,7 @@
     color: #555;
     margin: 0;
 }
+
 /* Estilos para la sección de Calificaciones y Comentarios */
 .calificaciones {
     padding: 40px 20px;
