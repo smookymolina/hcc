@@ -339,27 +339,27 @@
         </div>
     </section>
 
-    <section id="contacto" class="contacto">
-        <h2>Contacto</h2>
-        <div class="quienes-somos">
-            <h3>¿Quiénes somos?</h3>
-            <p>
-                Somos Hiring Connect Company (HCC), una agencia de reclutamiento especializada en conectar talento con oportunidades laborales. Nuestra misión es ayudarte a crecer profesionalmente y alcanzar tus metas. Recuerda que ninguna empresa puede pedirte dinero a cambio de una entrevista o un puesto.
-            </p>
+   <section id="contacto" class="contacto">
+    <h2>Contacto</h2>
+    <div class="quienes-somos">
+        <h3>¿Quiénes somos?</h3>
+        <p>
+            Somos Hiring Connect Company (HCC), una agencia de reclutamiento especializada en conectar talento con oportunidades laborales. Nuestra misión es ayudarte a crecer profesionalmente y alcanzar tus metas. Recuerda que ninguna empresa puede pedirte dinero a cambio de una entrevista o un puesto.
+        </p>
+    </div>
+    <!-- Formulario de contacto con Formspree -->
+    <form action="https://formspree.io/f/mvgznrgq" method="POST" class="formulario-contacto">
+        <div class="form-group">
+            <label for="email">Tu correo electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
         </div>
-        <!-- Formulario de Formspree -->
-        <form action="https://formspree.io/f/mvgznrgq" method="POST">
-            <label>
-                Tu correo electrónico:
-                <input type="email" name="email" placeholder="Correo electrónico" required>
-            </label>
-            <label>
-                Tu mensaje:
-                <textarea name="message" placeholder="Mensaje" required></textarea>
-            </label>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
+        <div class="form-group">
+            <label for="mensaje">Tu mensaje:</label>
+            <textarea id="mensaje" name="message" placeholder="Escribe tu mensaje aquí..." required></textarea>
+        </div>
+        <button type="submit" class="btn-enviar">Enviar</button>
+    </form>
+</section>
 
     <!-- Sección de Calificaciones y Comentarios -->
     <section id="calificaciones" class="calificaciones">
