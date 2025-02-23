@@ -162,6 +162,98 @@ input[type="file"] {
     width: 100%;
 }
 
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.modal-content h2 {
+    font-size: 24px;
+    color: #0077b6;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilos para el formulario de subir CV */
+#formulario-subir-cv {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#formulario-subir-cv .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#formulario-subir-cv label {
+    font-size: 16px;
+    color: #0077b6;
+    font-weight: bold;
+}
+
+#formulario-subir-cv input,
+#formulario-subir-cv textarea,
+#formulario-subir-cv select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    background: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+#formulario-subir-cv input:focus,
+#formulario-subir-cv textarea:focus,
+#formulario-subir-cv select:focus {
+    border-color: #0077b6;
+    outline: none;
+}
+
+#formulario-subir-cv .btn-enviar {
+    background: #0077b6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#formulario-subir-cv .btn-enviar:hover {
+    background: #00b4d8;
+}
+
 /* Estilos para el modal de Crear CV */
 .modal {
     display: none;
