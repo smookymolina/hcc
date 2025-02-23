@@ -1,891 +1,257 @@
-/* Estilos para los comentarios de ejemplo */
-.comentarios-ejemplo {
-    margin-top: 40px;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.comentarios-ejemplo h3 {
-    font-size: 24px;
-    color: #0077b6;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.comentario-item {
-    background: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    padding: 15px;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.comentario-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.comentario-header .avatar {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.comentario-header .comentario-info {
-    display: flex;
-    flex-direction: column;
-}
-
-.comentario-header .nombre {
-    font-size: 18px;
-    font-weight: bold;
-    color: #0077b6;
-}
-
-.comentario-header .fecha {
-    font-size: 14px;
-    color: #777;
-}
-
-.comentario-body {
-    margin-left: 60px; /* Para alinear con el avatar */
-}
-
-.comentario-body .estrellas {
-    display: flex;
-    gap: 5px;
-    margin-bottom: 10px;
-}
-
-.comentario-body .estrella {
-    font-size: 18px;
-    color: #ccc;
-}
-
-.comentario-body .estrella.active {
-    color: #ffd700; /* Color dorado para las estrellas activas */
-}
-
-.comentario-texto {
-    font-size: 16px;
-    color: #555;
-    margin: 0;
-}
-
-/* Estilos para la sección de Calificaciones y Comentarios */
-.calificaciones {
-    padding: 40px 20px;
-    background: #ffffff;
-    border-top: 1px solid #e0e0e0;
-}
-
-.calificaciones h2 {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 40px;
-    color: #0077b6;
-}
-
-#formulario-calificaciones {
-    max-width: 600px;
-    margin: 0 auto;
-    background: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-#formulario-calificaciones .form-group {
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-#formulario-calificaciones label {
-    display: block;
-    font-size: 16px;
-    color: #0077b6;
-    margin-bottom: 5px;
-}
-
-#formulario-calificaciones input,
-#formulario-calificaciones textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    color: #333;
-}
-
-#formulario-calificaciones textarea {
-    resize: vertical;
-    min-height: 150px;
-}
-
-#formulario-calificaciones .btn-enviar {
-    background: #0077b6;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-#formulario-calificaciones .btn-enviar:hover {
-    background: #00b4d8;
-}
-
-.estrellas {
-    display: flex;
-    gap: 5px;
-    margin-bottom: 10px;
-}
-
-.estrellas .estrella {
-    font-size: 24px;
-    color: #ccc;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-.estrellas .estrella:hover,
-.estrellas .estrella.active {
-    color: #ffd700; /* Color dorado para las estrellas seleccionadas */
-}
-/* Estilos generales */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background: #f9f9f9;
-    color: #333;
-}
-
-header {
-    background: linear-gradient(135deg, #0077b6, #00b4d8);
-    color: white;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-header .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-header .logo img {
-    height: 60px;
-    width: auto;
-}
-
-header .logo span {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-}
-
-header .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-}
-
-header .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px;
-    transition: background 0.3s;
-}
-
-header .nav-links a:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
-}
-
-/* Dropdown menu */
-.dropdown {
-    position: relative;
-}
-
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #0077b6;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.dropdown-menu li {
-    padding: 0;
-}
-
-.dropdown-menu a {
-    color: white;
-    padding: 10px 20px;
-    display: block;
-    text-decoration: none;
-    transition: background 0.3s;
-}
-
-.dropdown-menu a:hover {
-    background: #00b4d8;
-}
-
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-/* Hero section */
-.hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    background: linear-gradient(135deg, #0077b6, #00b4d8);
-    color: white;
-}
-
-.hero-content h1 {
-    margin-bottom: 20px;
-}
-
-.slogan-part1 {
-    font-family: 'Georgia', serif;
-    font-size: 60px;
-    font-weight: bold;
-    color: #ffffff;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.slogan-part2 {
-    font-family: 'Arial', sans-serif;
-    font-size: 40px;
-    font-weight: normal;
-    color: #ffffff;
-    display: block;
-}
-
-.hero-content p {
-    font-size: 24px;
-    margin-bottom: 30px;
-}
-
-.aplicar-ahora {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.aplicar-ahora button {
-    background: #0077b6;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background 0.3s;
-}
-
-.aplicar-ahora button:hover {
-    background: #00b4d8;
-}
-
-/* Estilos para el modal */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.modal-content {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 500px;
-    position: relative;
-}
-
-.modal-content .close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    cursor: pointer;
-    color: #333;
-}
-
-/* Estilos para el modal */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.modal-content {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 500px;
-    position: relative;
-}
-
-.modal-content .close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    cursor: pointer;
-    color: #333;
-}
-/* Estilos para el modal */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.modal-content {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 500px;
-    max-height: 80vh; /* Altura máxima del modal */
-    overflow-y: auto; /* Habilitar barra de desplazamiento vertical */
-    position: relative;
-    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
-}
-
-/* Estilos para el formulario dentro del modal */
-.modal-content form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding-right: 10px; /* Espacio para la barra de desplazamiento */
-}
-
-.modal-content .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.modal-content label {
-    font-size: 16px;
-    color: #0077b6;
-    font-weight: bold;
-}
-
-.modal-content input,
-.modal-content textarea,
-.modal-content select {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    color: #333;
-    background: #f9f9f9;
-    transition: border-color 0.3s;
-    width: 100%; /* Asegura que los campos no excedan el ancho del modal */
-    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
-}
-
-.modal-content textarea {
-    resize: vertical; /* Permite redimensionar verticalmente */
-    min-height: 100px; /* Altura mínima */
-}
-
-.modal-content .btn-enviar {
-    background: #0077b6;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.modal-content .btn-enviar:hover {
-    background: #00b4d8;
-}
-
-/* Personalizar la barra de desplazamiento */
-.modal-content::-webkit-scrollbar {
-    width: 10px; /* Ancho de la barra de desplazamiento */
-}
-
-.modal-content::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Color de fondo de la barra de desplazamiento */
-    border-radius: 5px;
-}
-
-.modal-content::-webkit-scrollbar-thumb {
-    background: #0077b6; /* Color de la barra de desplazamiento (azul) */
-    border-radius: 5px;
-}
-
-.modal-content::-webkit-scrollbar-thumb:hover {
-    background: #00b4d8; /* Color de la barra de desplazamiento al pasar el mouse */
-}
-/* Estilos para el formulario */
-#formulario-subir-cv {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-#formulario-subir-cv .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-#formulario-subir-cv label {
-    font-size: 16px;
-    color: #0077b6;
-    font-weight: bold;
-}
-
-#formulario-subir-cv input,
-#formulario-subir-cv textarea,
-#formulario-subir-cv select {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    color: #333;
-    background: #f9f9f9;
-    transition: border-color 0.3s;
-}
-
-#formulario-subir-cv input:focus,
-#formulario-subir-cv textarea:focus,
-#formulario-subir-cv select:focus {
-    border-color: #0077b6;
-    outline: none;
-}
-
-#formulario-subir-cv .btn-enviar {
-    background: #0077b6;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-#formulario-subir-cv .btn-enviar:hover {
-    background: #00b4d8;
-}
-
-/* Estilos para el modal de Crear CV */
-#modal-crear-cv .modal-content {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 600px; /* Un poco más ancho para acomodar más campos */
-    position: relative;
-}
-
-#modal-crear-cv .form-group {
-    margin-bottom: 15px;
-}
-
-#modal-crear-cv label {
-    font-size: 16px;
-    color: #0077b6;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
-}
-
-#modal-crear-cv input,
-#modal-crear-cv textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    color: #333;
-    background: #f9f9f9;
-    transition: border-color 0.3s;
-}
-
-#modal-crear-cv textarea {
-    resize: vertical;
-    min-height: 100px;
-}
-
-#modal-crear-cv input:focus,
-#modal-crear-cv textarea:focus {
-    border-color: #0077b6;
-    outline: none;
-}
-
-#modal-crear-cv .btn-enviar {
-    background: #0077b6;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-#modal-crear-cv .btn-enviar:hover {
-    background: #00b4d8;
-}
-/* Sección de Vacantes */
-.vacantes {
-    padding: 40px 20px;
-    background: #ffffff;
-}
-
-.vacantes h2 {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 40px;
-    color: #0077b6;
-}
-
-.vacante-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.vacante-item {
-    background: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.vacante-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.vacante-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.vacante-header h3 {
-    font-size: 24px;
-    color: #0077b6;
-    margin: 0;
-}
-
-.badge {
-    background: #00b4d8;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.vacante-info p {
-    margin: 10px 0;
-    font-size: 16px;
-    color: #555;
-}
-
-.vacante-actions {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.btn-mas-info,
-.btn-aplicar {
-    background: #0077b6;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background 0.3s;
-}
-
-.btn-mas-info:hover,
-.btn-aplicar:hover {
-    background: #00b4d8;
-}
-
-/* Información adicional */
-.info-adicional {
-    margin-top: 20px;
-    padding: 15px;
-    background: #f9f9f9;
-    border: 1px solid #e0e0e0;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: none; /* Oculto por defecto */
-}
-
-.info-adicional ul {
-    list-style-type: disc;
-    margin-left: 20px;
-}
-
-.info-adicional p {
-    margin-bottom: 10px;
-    font-size: 16px;
-    color: #555;
-}
-
-/* Sección de Requisitos */
-.requisitos {
-    padding: 40px 20px;
-    background: #f9f9f9;
-}
-
-.requisitos h2 {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 40px;
-    color: #0077b6;
-}
-
-.requisitos-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.requisito-item {
-    background: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.requisito-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.requisito-item h3 {
-    font-size: 24px;
-    color: #0077b6;
-    margin: 0 0 10px 0;
-}
-
-.requisito-item p {
-    font-size: 16px;
-    color: #555;
-    margin: 0;
-}
-
-/* Sección de Beneficios */
-.beneficios {
-    padding: 40px 20px;
-    background: #ffffff;
-}
-
-.beneficios h2 {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 40px;
-    color: #0077b6;
-}
-
-.beneficios-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.beneficio-item {
-    background: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.beneficio-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.beneficio-item h3 {
-    font-size: 24px;
-    color: #0077b6;
-    margin: 0 0 10px 0;
-}
-
-.beneficio-item p {
-    font-size: 16px;
-    color: #555;
-    margin: 0;
-}
-
-.beneficio-item.bonos-adicionales {
-    background: #e3f2fd; /* Fondo azul claro */
-    border: 2px solid #0077b6; /* Borde azul */
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Sección de Contacto */
-.contacto {
-    padding: 40px 20px;
-    background: #f9f9f9;
-}
-
-.contacto h2 {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 40px;
-    color: #0077b6;
-}
-
-.quienes-somos {
-    background: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 40px;
-}
-
-.quienes-somos h3 {
-    font-size: 24px;
-    color: #0077b6;
-    margin: 0 0 10px 0;
-}
-
-.quienes-somos p {
-    font-size: 16px;
-    color: #555;
-    margin: 0;
-}
-
-.formulario-contacto {
-    max-width: 600px;
-    margin: 0 auto;
-    background: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.formulario-contacto .form-group {
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.formulario-contacto label {
-    display: block;
-    font-size: 16px;
-    color: #0077b6;
-    margin-bottom: 5px;
-}
-
-.formulario-contacto input,
-.formulario-contacto textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    color: #333;
-}
-
-.formulario-contacto textarea {
-    resize: vertical;
-    min-height: 150px;
-}
-
-.formulario-contacto .btn-enviar {
-    background: #0077b6;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.formulario-contacto .btn-enviar:hover {
-    background: #00b4d8;
-}
-
-/* Footer */
-footer {
-    background: #0077b6;
-    color: white;
-    text-align: center;
-    padding: 20px;
+// Manejo de la selección de estrellas
+const estrellas = document.querySelectorAll(".estrellas .estrella");
+const inputCalificacion = document.getElementById("calificacion");
+
+if (estrellas && inputCalificacion) {
+    estrellas.forEach((estrella) => {
+        estrella.addEventListener("click", function () {
+            const valor = this.getAttribute("data-value");
+            inputCalificacion.value = valor;
+
+            // Remover la clase 'active' de todas las estrellas
+            estrellas.forEach((e) => e.classList.remove("active"));
+
+            // Agregar la clase 'active' a las estrellas seleccionadas
+            for (let i = 0; i < valor; i++) {
+                estrellas[i].classList.add("active");
+            }
+        });
+    });
+}
+
+// Manejo del formulario de calificaciones
+const formularioCalificaciones = document.getElementById("formulario-calificaciones");
+const mensajeExito = document.getElementById("mensaje-exito");
+
+if (formularioCalificaciones) {
+    formularioCalificaciones.addEventListener("submit", function (event) {
+        event.preventDefault(); // Evita que el formulario se envíe
+
+        // Validar que se haya seleccionado una calificación
+        if (!inputCalificacion.value) {
+            alert("Por favor, selecciona una calificación.");
+            return;
+        }
+
+        // Validar el correo electrónico
+        const emailInput = document.getElementById("email-calificacion");
+        const email = emailInput.value.trim();
+        const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+        if (!emailValido) {
+            alert("Por favor, ingresa un correo electrónico válido.");
+            return;
+        }
+
+        // Mostrar mensaje de éxito
+        mensajeExito.style.display = "block";
+
+        // Limpiar el formulario después de 2 segundos
+        setTimeout(() => {
+            formularioCalificaciones.reset();
+            estrellas.forEach((e) => e.classList.remove("active"));
+            inputCalificacion.value = "";
+            mensajeExito.style.display = "none";
+        }, 2000);
+    });
+}
+// Manejo del modal de subir CV
+const btnSubirCV = document.getElementById("btn-subir-cv");
+const modalSubirCV = document.getElementById("modal-subir-cv");
+const closeModalSubirCV = modalSubirCV ? modalSubirCV.querySelector(".close") : null;
+
+// Abrir el modal al hacer clic en el botón "Subir CV"
+if (btnSubirCV && modalSubirCV) {
+    btnSubirCV.addEventListener("click", function () {
+        modalSubirCV.style.display = "flex";
+    });
+}
+
+// Cerrar el modal al hacer clic en la "X"
+if (closeModalSubirCV) {
+    closeModalSubirCV.addEventListener("click", function () {
+        modalSubirCV.style.display = "none";
+    });
+}
+
+// Cerrar el modal al hacer clic fuera del contenido del modal
+window.addEventListener("click", function (event) {
+    if (modalSubirCV && event.target === modalSubirCV) {
+        modalSubirCV.style.display = "none";
+    }
+});
+
+// Manejo del formulario de subir CV
+const formularioSubirCV = document.getElementById("formulario-subir-cv");
+if (formularioSubirCV) {
+    formularioSubirCV.addEventListener("submit", function (event) {
+        event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+
+        // Validar el formato del archivo
+        const fileInput = document.getElementById("archivo-cv");
+        const file = fileInput.files[0];
+        if (file && !file.type.includes('pdf')) {
+            alert("Por favor, sube solo archivos PDF.");
+            return;
+        }
+
+        // Validar el tamaño del archivo (máximo 5MB)
+        if (file && file.size > 5 * 1024 * 1024) {
+            alert("El archivo es demasiado grande. Por favor, sube un archivo menor a 5MB.");
+            return;
+        }
+
+        // Obtener los datos del formulario
+        const formData = new FormData(formularioSubirCV);
+
+        // Enviar los datos a Formspree
+        fetch("https://formspree.io/f/mkgoabpj", {
+            method: "POST",
+            body: formData,
+            headers: {
+                Accept: "application/json",
+            },
+        })
+            .then((response) => {
+                if (response.ok) {
+                    alert("¡CV enviado con éxito!");
+                    formularioSubirCV.reset(); // Limpiar el formulario
+                    modalSubirCV.style.display = "none"; // Cerrar el modal
+                } else {
+                    alert("Hubo un error al enviar el CV. Inténtalo de nuevo.");
+                }
+            })
+            .catch((error) => {
+                console.error("Error:", error);
+                alert("Hubo un error al enviar el CV. Inténtalo de nuevo.");
+            });
+    });
+}
+
+// Manejo del modal de Crear CV
+const btnCrearCV = document.getElementById("btn-crear-cv");
+const modalCrearCV = document.getElementById("modal-crear-cv");
+const closeModalCrearCV = modalCrearCV ? modalCrearCV.querySelector(".close") : null;
+
+// Abrir el modal al hacer clic en el botón "Crear CV"
+if (btnCrearCV && modalCrearCV) {
+    btnCrearCV.addEventListener("click", function () {
+        modalCrearCV.style.display = "flex";
+    });
+}
+
+// Cerrar el modal al hacer clic en la "X"
+if (closeModalCrearCV) {
+    closeModalCrearCV.addEventListener("click", function () {
+        modalCrearCV.style.display = "none";
+    });
+}
+
+// Cerrar el modal al hacer clic fuera del contenido del modal
+window.addEventListener("click", function (event) {
+    if (modalCrearCV && event.target === modalCrearCV) {
+        modalCrearCV.style.display = "none";
+    }
+});
+
+// Manejo del formulario de Crear CV
+const formularioCrearCV = document.getElementById("formulario-crear-cv");
+if (formularioCrearCV) {
+    formularioCrearCV.addEventListener("submit", function (event) {
+        event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+
+        // Obtener los datos del formulario
+        const formData = new FormData(formularioCrearCV);
+
+        // Enviar los datos a Formspree
+        fetch("https://formspree.io/f/{tu_endpoint_aqui}", {  // Reemplaza con tu endpoint de Formspree
+            method: "POST",
+            body: formData,
+            headers: {
+                Accept: "application/json",
+            },
+        })
+            .then((response) => {
+                if (response.ok) {
+                    alert("¡CV creado y enviado con éxito!");
+                    formularioCrearCV.reset(); // Limpiar el formulario
+                    modalCrearCV.style.display = "none"; // Cerrar el modal
+                } else {
+                    alert("Hubo un error al enviar el CV. Inténtalo de nuevo.");
+                }
+            })
+            .catch((error) => {
+                console.error("Error:", error);
+                alert("Hubo un error al enviar el CV. Inténtalo de nuevo.");
+            });
+    });
+}
+
+// Funcionalidad para los botones de "Más información"
+const botonesMasInfo = document.querySelectorAll(".btn-mas-info");
+if (botonesMasInfo) {
+    botonesMasInfo.forEach((button) => {
+        button.addEventListener("click", function (event) {
+            event.stopPropagation(); // Evita que el clic se propague al documento
+            const infoAdicional = button
+                .closest(".vacante-item")
+                .querySelector(".info-adicional");
+            if (infoAdicional) {
+                // Alternar la visibilidad del contenedor
+                if (
+                    infoAdicional.style.display === "none" ||
+                    infoAdicional.style.display === ""
+                ) {
+                    infoAdicional.style.display = "block";
+                } else {
+                    infoAdicional.style.display = "none";
+                }
+            }
+        });
+    });
+}
+
+// Cerrar la información adicional al hacer clic fuera
+document.addEventListener("click", function (event) {
+    const infoAdicionales = document.querySelectorAll(".info-adicional");
+    infoAdicionales.forEach((infoAdicional) => {
+        if (
+            infoAdicional.style.display === "block" &&
+            !event.target.closest(".vacante-item")
+        ) {
+            infoAdicional.style.display = "none";
+        }
+    });
+});
+
+// Manejo del formulario de contacto
+const formularioContacto = document.querySelector(".formulario-contacto");
+if (formularioContacto) {
+    formularioContacto.addEventListener("submit", function (event) {
+        event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+
+        // Obtener los datos del formulario
+        const formData = new FormData(formularioContacto);
+
+        // Enviar los datos a Formspree usando Fetch API
+        fetch("https://formspree.io/f/mbldeyka", {
+            method: "POST",
+            body: formData,
+            headers: {
+                Accept: "application/json",
+            },
+        })
+            .then((response) => {
+                if (response.ok) {
+                    alert("¡Mensaje enviado con éxito!");
+                    formularioContacto.reset(); // Limpiar el formulario
+                } else {
+                    alert("Hubo un error al enviar el mensaje. Inténtalo de nuevo.");
+                }
+            })
+            .catch((error) => {
+                console.error("Error:", error);
+                alert("Hubo un error al enviar el mensaje. Inténtalo de nuevo.");
+            });
+    });
 }
