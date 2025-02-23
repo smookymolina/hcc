@@ -422,9 +422,10 @@
             </div>
         </div>
     </section>
+    
 <section id="calificaciones" class="calificaciones">
     <h2>Calificaciones y Comentarios</h2>
-    <form id="formulario-calificaciones" action="https://formspree.io/f/mbldeyka" method="POST">
+    <form id="formulario-calificaciones">
         <div class="form-group">
             <label for="nombre-calificacion">Nombre:</label>
             <input type="text" id="nombre-calificacion" name="nombre" placeholder="Tu nombre" required>
@@ -446,7 +447,11 @@
         </div>
         <button type="submit" class="btn-enviar">Enviar</button>
     </form>
+    <div id="mensaje-exito" class="mensaje-exito" style="display: none;">
+        ¡Gracias por tu calificación y comentario!
+    </div>
 </section>
+    
     <section id="contacto" class="contacto">
         <h2>Contacto</h2>
         <div class="quienes-somos">
