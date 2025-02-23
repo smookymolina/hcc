@@ -49,48 +49,47 @@
     </header>
 
     <section id="inicio" class="hero">
-    <div class="hero-content">
-        <h1>
-            <span class="slogan-part1">Crecer es un proceso</span>
-            <span class="slogan-part2">Comienza ahora</span>
-        </h1>
-        <p>Únete a nosotros.</p>
-        <div class="aplicar-ahora">
-           <!-- Botón para abrir el modal -->
-<button id="btn-subir-cv">Subir CV</button>
-            <button id="btn-crear-cv">Crear CV</button>
+        <div class="hero-content">
+            <h1>
+                <span class="slogan-part1">Crecer es un proceso</span>
+                <span class="slogan-part2">Comienza ahora</span>
+            </h1>
+            <p>Únete a nosotros.</p>
+            <div class="aplicar-ahora">
+                <!-- Botón para abrir el modal -->
+                <button id="btn-subir-cv">Subir CV</button>
+                <button id="btn-crear-cv">Crear CV</button>
+            </div>
+            <div id="info-container"></div>
         </div>
-        <div id="info-container"></div>
-    </div>
-</section>
-    
-<!-- Modal para subir CV -->
-<div id="modal-subir-cv" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Subir CV</h2>
-        <form id="formulario-subir-cv" action="https://formspree.io/f/mkgoabpj" method="POST" enctype="multipart/form-data">
-            <div class="form-group">
-                <label for="nombre">Nombre completo:</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez López" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" name="email" placeholder="Ej: juan.perez@example.com" required>
-            </div>
-            <div class="form-group">
-                <label for="archivo-cv">Subir CV (PDF):</label>
-                <input type="file" id="archivo-cv" name="upload" accept=".pdf" required>
-            </div>
-            <button type="submit" class="btn-enviar">Enviar CV</button>
-        </form>
-    </div>
-</div>
+    </section>
 
-    
+    <!-- Modal para subir CV -->
+    <div id="modal-subir-cv" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Subir CV</h2>
+            <form id="formulario-subir-cv" action="https://formspree.io/f/mkgoabpj" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez López" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="Ej: juan.perez@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="archivo-cv">Subir CV (PDF):</label>
+                    <input type="file" id="archivo-cv" name="upload" accept=".pdf" required>
+                </div>
+                <button type="submit" class="btn-enviar">Enviar CV</button>
+            </form>
+        </div>
+    </div>
+
     <section id="vacantes" class="vacantes">
         <h2>Vacantes disponibles</h2>
-        <div class="vacante-list">    
+        <div class="vacante-list">
             <!-- Vacante 1: Asesor de Telemarketing -->
             <div id="vacante1" class="vacante-item">
                 <div class="vacante-header">
