@@ -1,12 +1,12 @@
 // Manejo del formulario de calificaciones
 const formularioCalificaciones = document.getElementById("formulario-calificaciones");
-const mensajeExito = document.getElementById("mensaje-exito");
 
 if (formularioCalificaciones) {
     formularioCalificaciones.addEventListener("submit", function (event) {
         event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
 
         // Validar que se haya seleccionado una calificación
+        const inputCalificacion = document.getElementById("calificacion");
         if (!inputCalificacion.value) {
             alert("Por favor, selecciona una calificación.");
             return;
@@ -35,16 +35,10 @@ if (formularioCalificaciones) {
         })
             .then((response) => {
                 if (response.ok) {
-                    // Mostrar mensaje de éxito
-                    mensajeExito.style.display = "block";
-
-                    // Limpiar el formulario después de 2 segundos
-                    setTimeout(() => {
-                        formularioCalificaciones.reset();
-                        estrellas.forEach((e) => e.classList.remove("active"));
-                        inputCalificacion.value = "";
-                        mensajeExito.style.display = "none";
-                    }, 2000);
+                    alert("¡Tu calificación y comentario han sido enviados con éxito!"); // Mensaje de éxito
+                    formularioCalificaciones.reset(); // Limpiar el formulario
+                    estrellas.forEach((e) => e.classList.remove("active")); // Reiniciar las estrellas
+                    inputCalificacion.value = ""; // Reiniciar el valor de la calificación
                 } else {
                     alert("Hubo un error al enviar la calificación. Inténtalo de nuevo.");
                 }
