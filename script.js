@@ -1,8 +1,34 @@
+// Obtener referencias a los elementos del DOM
+const btnSubirCV = document.getElementById("btn-subir-cv");
+const modalSubirCV = document.getElementById("modal-subir-cv");
+const closeModal = document.querySelector(".close");
+
+// Abrir el modal al hacer clic en el botón "Subir CV"
+if (btnSubirCV) {
+    btnSubirCV.addEventListener("click", function () {
+        modalSubirCV.style.display = "flex";
+    });
+}
+
+// Cerrar el modal al hacer clic en la "X"
+if (closeModal) {
+    closeModal.addEventListener("click", function () {
+        modalSubirCV.style.display = "none";
+    });
+}
+
+// Cerrar el modal al hacer clic fuera del contenido del modal
+window.addEventListener("click", function (event) {
+    if (event.target === modalSubirCV) {
+        modalSubirCV.style.display = "none";
+    }
+});
+
 // Manejo del formulario de subir CV
 const formularioSubirCV = document.getElementById("formulario-subir-cv");
 if (formularioSubirCV) {
     formularioSubirCV.addEventListener("submit", function (event) {
-        event.preventDefault();
+        event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
 
         // Validar el formato del archivo
         const fileInput = document.getElementById("archivo-cv");
@@ -32,8 +58,8 @@ if (formularioSubirCV) {
             .then((response) => {
                 if (response.ok) {
                     alert("¡CV enviado con éxito!");
-                    formularioSubirCV.reset();
-                    modalSubirCV.style.display = "none";
+                    formularioSubirCV.reset(); // Limpiar el formulario
+                    modalSubirCV.style.display = "none"; // Cerrar el modal
                 } else {
                     alert("Hubo un error al enviar el CV. Inténtalo de nuevo.");
                 }
