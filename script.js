@@ -33,6 +33,16 @@ if (formularioCalificaciones) {
             return;
         }
 
+        // Validar el correo electrónico
+        const emailInput = document.getElementById("email-calificacion");
+        const email = emailInput.value.trim();
+        const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+        if (!emailValido) {
+            alert("Por favor, ingresa un correo electrónico válido.");
+            return;
+        }
+
         // Mostrar mensaje de éxito
         mensajeExito.style.display = "block";
 
