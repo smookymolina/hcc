@@ -132,112 +132,57 @@ window.addEventListener("click", function (event) {
     }
 });
 
-// Manejo del formulario de subir CV
-const formularioSubirCV = document.getElementById("formulario-subir-cv");
-if (formularioSubirCV) {
-    formularioSubirCV.addEventListener("submit", function (event) {
-        event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+// Manejo del modal de Subir CV
+const btnSubirCV = document.getElementById("btn-subir-cv");
+const modalSubirCV = document.getElementById("modal-subir-cv");
+const closeModalSubirCV = modalSubirCV.querySelector(".close");
 
-        // Validar el formato del archivo
-        const fileInput = document.getElementById("archivo-cv");
-        const file = fileInput.files[0];
-        if (file && !file.type.includes('pdf')) {
-            alert("Por favor, sube solo archivos PDF.");
-            return;
-        }
-
-        // Validar el tamaño del archivo (máximo 5MB)
-        if (file && file.size > 5 * 1024 * 1024) {
-            alert("El archivo es demasiado grande. Por favor, sube un archivo menor a 5MB.");
-            return;
-        }
-
-        // Obtener los datos del formulario
-        const formData = new FormData(formularioSubirCV);
-
-        // Enviar los datos a Formspree
-        fetch("https://formspree.io/f/mkgoabpj", {
-            method: "POST",
-            body: formData,
-            headers: {
-                Accept: "application/json",
-            },
-        })
-            .then((response) => {
-                if (response.ok) {
-                    alert("¡CV enviado con éxito!");
-                    formularioSubirCV.reset(); // Limpiar el formulario
-                    modalSubirCV.style.display = "none"; // Cerrar el modal
-                } else {
-                    alert("Hubo un error al enviar el CV. Inténtalo de nuevo.");
-                }
-            })
-            .catch((error) => {
-                console.error("Error:", error);
-                alert("Hubo un error al enviar el CV. Inténtalo de nuevo.");
-            });
+// Abrir el modal de Subir CV
+if (btnSubirCV && modalSubirCV) {
+    btnSubirCV.addEventListener("click", function () {
+        modalSubirCV.style.display = "flex"; // Mostrar el modal
     });
 }
+
+// Cerrar el modal de Subir CV
+if (closeModalSubirCV) {
+    closeModalSubirCV.addEventListener("click", function () {
+        modalSubirCV.style.display = "none"; // Ocultar el modal
+    });
+}
+
+// Cerrar el modal de Subir CV al hacer clic fuera del contenido
+window.addEventListener("click", function (event) {
+    if (event.target === modalSubirCV) {
+        modalSubirCV.style.display = "none"; // Ocultar el modal
+    }
+});
 
 // Manejo del modal de Crear CV
 const btnCrearCV = document.getElementById("btn-crear-cv");
 const modalCrearCV = document.getElementById("modal-crear-cv");
-const closeModalCrearCV = modalCrearCV ? modalCrearCV.querySelector(".close") : null;
+const closeModalCrearCV = modalCrearCV.querySelector(".close");
 
-// Abrir el modal al hacer clic en el botón "Crear CV"
+// Abrir el modal de Crear CV
 if (btnCrearCV && modalCrearCV) {
     btnCrearCV.addEventListener("click", function () {
-        modalCrearCV.style.display = "flex";
+        modalCrearCV.style.display = "flex"; // Mostrar el modal
     });
 }
 
-// Cerrar el modal al hacer clic en la "X"
+// Cerrar el modal de Crear CV
 if (closeModalCrearCV) {
     closeModalCrearCV.addEventListener("click", function () {
-        modalCrearCV.style.display = "none";
+        modalCrearCV.style.display = "none"; // Ocultar el modal
     });
 }
 
-// Cerrar el modal al hacer clic fuera del contenido del modal
+// Cerrar el modal de Crear CV al hacer clic fuera del contenido
 window.addEventListener("click", function (event) {
-    if (modalCrearCV && event.target === modalCrearCV) {
-        modalCrearCV.style.display = "none";
+    if (event.target === modalCrearCV) {
+        modalCrearCV.style.display = "none"; // Ocultar el modal
     }
 });
-
-// Manejo del formulario de Crear CV
-const formularioCrearCV = document.getElementById("formulario-crear-cv");
-if (formularioCrearCV) {
-    formularioCrearCV.addEventListener("submit", function (event) {
-        event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
-
-        // Obtener los datos del formulario
-        const formData = new FormData(formularioCrearCV);
-
-        // Enviar los datos a Formspree
-        fetch("https://formspree.io/f/{tu_endpoint_aqui}", {  // Reemplaza con tu endpoint de Formspree
-            method: "POST",
-            body: formData,
-            headers: {
-                Accept: "application/json",
-            },
-        })
-            .then((response) => {
-                if (response.ok) {
-                    alert("¡CV creado y enviado con éxito!");
-                    formularioCrearCV.reset(); // Limpiar el formulario
-                    modalCrearCV.style.display = "none"; // Cerrar el modal
-                } else {
-                    alert("Hubo un error al enviar el CV. Inténtalo de nuevo.");
-                }
-            })
-            .catch((error) => {
-                console.error("Error:", error);
-                alert("Hubo un error al enviar el CV. Inténtalo de nuevo.");
-            });
-    });
-}
-
 // Funcionalidad para los botones de "Más información"
 const botonesMasInfo = document.querySelectorAll(".btn-mas-info");
 if (botonesMasInfo) {
