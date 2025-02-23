@@ -1,3 +1,19 @@
+/* Estilos adicionales para el input de nombre */
+#formulario-subir-cv input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    background: #f9f9f9;
+    transition: border-color 0.3s;
+    width: 100%;
+}
+
+#formulario-subir-cv input[type="text"]:focus {
+    border-color: #0077b6;
+    outline: none;
+}
 /* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
