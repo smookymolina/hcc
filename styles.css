@@ -363,6 +363,93 @@ header .nav-links a:hover {
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+/* Estilos para la sección de contacto */
+.contacto {
+    padding: 40px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.contacto h2 {
+    font-size: 32px;
+    color: #0077b6;
+    margin-bottom: 20px;
+}
+
+.quienes-somos {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.quienes-somos h3 {
+    font-size: 24px;
+    color: #0077b6;
+    margin-bottom: 10px;
+}
+
+.quienes-somos p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Estilos para el formulario de contacto */
+.formulario-contacto {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-contacto .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.formulario-contacto label {
+    display: block;
+    font-size: 16px;
+    color: #0077b6;
+    margin-bottom: 5px;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.formulario-contacto textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.formulario-contacto .btn-enviar {
+    background: #0077b6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.formulario-contacto .btn-enviar:hover {
+    background: #00b4d8;
+}
 
 /* Sección de Contacto */
 .contacto {
