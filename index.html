@@ -5,13 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HCC - Página principal</title>
     <link rel="stylesheet" href="styles.css">
-
     <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body>
-    
-</body>
-</html>
     <header>
         <nav>
             <div class="logo">
@@ -66,7 +62,8 @@
             <div id="info-container"></div>
         </div>
     </section>
-<!-- Modal para subir CV -->
+
+    <!-- Modal para subir CV -->
     <div id="modal-subir-cv" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -84,7 +81,6 @@
             </form>
         </div>
     </div>
-
 
     <section id="vacantes" class="vacantes">
         <h2>Vacantes disponibles</h2>
@@ -358,131 +354,28 @@
         </div>
     </section>
 
-   <section id="contacto" class="contacto">
-    <h2>Contacto</h2>
-    <div class="quienes-somos">
-        <h3>¿Quiénes somos?</h3>
-        <p>
-            Somos Hiring Connect Company (HCC), una agencia de reclutamiento especializada en conectar talento con oportunidades laborales. Nuestra misión es ayudarte a crecer profesionalmente y alcanzar tus metas. Recuerda que ninguna empresa puede pedirte dinero a cambio de una entrevista o un puesto.
-        </p>
-    </div>
-    <!-- Formulario de contacto con Formspree -->
-    <form action="https://formspree.io/f/mbldeyka" method="POST" class="formulario-contacto">
-        <div class="form-group">
-            <label for="email">Tu correo electrónico:</label>
-            <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+    <section id="contacto" class="contacto">
+        <h2>Contacto</h2>
+        <div class="quienes-somos">
+            <h3>¿Quiénes somos?</h3>
+            <p>
+                Somos Hiring Connect Company (HCC), una agencia de reclutamiento especializada en conectar talento con oportunidades laborales. Nuestra misión es ayudarte a crecer profesionalmente y alcanzar tus metas. Recuerda que ninguna empresa puede pedirte dinero a cambio de una entrevista o un puesto.
+            </p>
         </div>
-        <div class="form-group">
-            <label for="mensaje">Tu mensaje:</label>
-            <textarea id="mensaje" name="message" placeholder="Escribe tu mensaje aquí..." required></textarea>
-        </div>
-        <button type="submit" class="btn-enviar">Enviar</button>
-    </form>
-</section>
-
-    <section id="calificaciones" class="calificaciones">
-    <h2>Calificaciones y Comentarios</h2>
-    <div class="calificaciones-list">
-        <div class="calificacion-item">
-            <div class="calificacion-header">
-                <h3>Juan Pérez</h3>
-                <span class="calificacion-estrellas">★★★★★</span>
-            </div>
-            <div class="calificacion-info">
-                <p>"Excelente servicio, me ayudaron a encontrar el trabajo perfecto para mí. ¡Muy recomendados!"</p>
-            </div>
-        </div>
-        <div class="calificacion-item">
-            <div class="calificacion-header">
-                <h3>María González</h3>
-                <span class="calificacion-estrellas">★★★★☆</span>
-            </div>
-            <div class="calificacion-info">
-                <p>"Buena atención, aunque el proceso de selección fue un poco largo. Gracias por la oportunidad."</p>
-            </div>
-        </div>
-        <div class="calificacion-item">
-            <div class="calificacion-header">
-                <h3>Carlos López</h3>
-                <span class="calificacion-estrellas">★★★★★</span>
-            </div>
-            <div class="calificacion-info">
-                <p>"Muy profesionales, me guiaron en todo momento. ¡Gracias HCC!"</p>
-            </div>
-        </div>
-    </div>
-    <!-- Formulario de Calificaciones y Comentarios con Formspree -->
-    <form id="formulario-calificacion" action="https://formspree.io/f/xnnjyvzg" method="POST">
-        <h3>Deja tu calificación y comentario</h3>
-        <div class="form-group">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-        </div>
-        <div class="form-group">
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" placeholder="Ej: juan.perez@example.com" required>
-        </div>
-        <div class="form-group">
-            <label for="calificacion">Calificación:</label>
-            <select id="calificacion" name="calificacion" required>
-                <option value="5">★★★★★</option>
-                <option value="4">★★★★☆</option>
-                <option value="3">★★★☆☆</option>
-                <option value="2">★★☆☆☆</option>
-                <option value="1">★☆☆☆☆</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="comentario">Comentario:</label>
-            <textarea id="comentario" name="comentario" rows="4" required></textarea>
-        </div>
-        <button type="submit">Enviar</button>
-    </form>
-</section>
-
-   <!-- Modal para crear CV -->
-<div id="modal-crear-cv" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Crear CV</h2>
-        <form id="formulario-crear-cv" action="https://formspree.io/f/mjkgdrop" method="POST">
+        <!-- Formulario de contacto con Formspree -->
+        <form action="https://formspree.io/f/mbldeyka" method="POST" class="formulario-contacto">
             <div class="form-group">
-                <label for="nombre-completo">Nombre completo:</label>
-                <input type="text" id="nombre-completo" name="nombre-completo" placeholder="Ej: Juan Pérez" required>
+                <label for="email">Tu correo electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
             </div>
             <div class="form-group">
-                <label for="nacimiento">Fecha de Nacimiento:</label>
-                <input type="date" id="nacimiento" name="nacimiento" required>
+                <label for="mensaje">Tu mensaje:</label>
+                <textarea id="mensaje" name="message" placeholder="Escribe tu mensaje aquí..." required></textarea>
             </div>
-            <div class="form-group">
-                <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" name="email" placeholder="Ej: juan.perez@example.com" required>
-            </div>
-            <div class="form-group">
-                <label for="telefono">Teléfono:</label>
-                <input type="tel" id="telefono" name="telefono" placeholder="Ej: +52 55 1234 5678" required>
-            </div>
-            <div class="form-group">
-                <label for="direccion">Dirección:</label>
-                <input type="text" id="direccion" name="direccion" placeholder="Ej: Calle Falsa 123, CDMX" required>
-            </div>
-            <div class="form-group">
-                <label for="experiencia">Experiencia laboral (Últimos 2 trabajos):</label>
-                <textarea id="experiencia" name="experiencia" rows="4" placeholder="Describe tu experiencia laboral..." required></textarea>
-            </div>
-            <div class="form-group">
-                <label for="educacion">Educación:</label>
-                <textarea id="educacion" name="educacion" rows="4" placeholder="Describe tu formación académica..." required></textarea>
-            </div>
-            <div class="form-group">
-                <label for="habilidades">Habilidades:</label>
-                <textarea id="habilidades" name="habilidades" rows="4" placeholder="Enumera tus habilidades..." required></textarea>
-            </div>
-            <button type="submit" class="btn-enviar">Enviar CV</button>
+            <button type="submit" class="btn-enviar">Enviar</button>
         </form>
-    </div>
-</div>
-    
+    </section>
+
     <footer>
         <p>&copy; 2025 HCC. Todos los derechos reservados.</p>
     </footer>
