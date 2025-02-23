@@ -1,25 +1,25 @@
 // Manejo del modal de subir CV
 const btnSubirCV = document.getElementById("btn-subir-cv");
 const modalSubirCV = document.getElementById("modal-subir-cv");
-const closeModal = document.querySelector(".close");
+const closeModalSubirCV = modalSubirCV ? modalSubirCV.querySelector(".close") : null;
 
 // Abrir el modal al hacer clic en el botón "Subir CV"
-if (btnSubirCV) {
+if (btnSubirCV && modalSubirCV) {
     btnSubirCV.addEventListener("click", function () {
         modalSubirCV.style.display = "flex";
     });
 }
 
 // Cerrar el modal al hacer clic en la "X"
-if (closeModal) {
-    closeModal.addEventListener("click", function () {
+if (closeModalSubirCV) {
+    closeModalSubirCV.addEventListener("click", function () {
         modalSubirCV.style.display = "none";
     });
 }
 
 // Cerrar el modal al hacer clic fuera del contenido del modal
 window.addEventListener("click", function (event) {
-    if (event.target === modalSubirCV) {
+    if (modalSubirCV && event.target === modalSubirCV) {
         modalSubirCV.style.display = "none";
     }
 });
@@ -74,10 +74,10 @@ if (formularioSubirCV) {
 // Manejo del modal de Crear CV
 const btnCrearCV = document.getElementById("btn-crear-cv");
 const modalCrearCV = document.getElementById("modal-crear-cv");
-const closeModalCrearCV = modalCrearCV.querySelector(".close");
+const closeModalCrearCV = modalCrearCV ? modalCrearCV.querySelector(".close") : null;
 
 // Abrir el modal al hacer clic en el botón "Crear CV"
-if (btnCrearCV) {
+if (btnCrearCV && modalCrearCV) {
     btnCrearCV.addEventListener("click", function () {
         modalCrearCV.style.display = "flex";
     });
@@ -92,10 +92,43 @@ if (closeModalCrearCV) {
 
 // Cerrar el modal al hacer clic fuera del contenido del modal
 window.addEventListener("click", function (event) {
-    if (event.target === modalCrearCV) {
+    if (modalCrearCV && event.target === modalCrearCV) {
         modalCrearCV.style.display = "none";
     }
 });
+
+// Manejo del formulario de Crear CV
+const formularioCrearCV = document.getElementById("formulario-crear-cv");
+if (formularioCrearCV) {
+    formularioCrearCV.addEventListener("submit", function (event) {
+        event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+
+        // Obtener los datos del formulario
+        const formData = new FormData(formularioCrearCV);
+
+        // Enviar los datos a Formspree
+        fetch("https://formspree.io/f/{tu_endpoint_aqui}", {  // Reemplaza con tu endpoint de Formspree
+            method: "POST",
+            body: formData,
+            headers: {
+                Accept: "application/json",
+            },
+        })
+            .then((response) => {
+                if (response.ok) {
+                    alert("¡CV creado y enviado con éxito!");
+                    formularioCrearCV.reset(); // Limpiar el formulario
+                    modalCrearCV.style.display = "none"; // Cerrar el modal
+                } else {
+                    alert("Hubo un error al enviar el CV. Inténtalo de nuevo.");
+                }
+            })
+            .catch((error) => {
+                console.error("Error:", error);
+                alert("Hubo un error al enviar el CV. Inténtalo de nuevo.");
+            });
+    });
+}
 
 // Funcionalidad para los botones de "Más información"
 const botonesMasInfo = document.querySelectorAll(".btn-mas-info");
