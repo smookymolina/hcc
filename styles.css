@@ -216,7 +216,58 @@ header .nav-links a:hover {
     cursor: pointer;
     color: #333;
 }
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
 
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh; /* Altura máxima del modal */
+    overflow-y: auto; /* Habilitar barra de desplazamiento vertical */
+    position: relative;
+}
+
+/* Personalizar la barra de desplazamiento */
+.modal-content::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra de desplazamiento */
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color de fondo de la barra de desplazamiento */
+    border-radius: 5px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: #0077b6; /* Color de la barra de desplazamiento (azul) */
+    border-radius: 5px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: #00b4d8; /* Color de la barra de desplazamiento al pasar el mouse */
+}
+
+.modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
 /* Estilos para el formulario */
 #formulario-subir-cv {
     display: flex;
