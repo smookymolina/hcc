@@ -1,3 +1,13 @@
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh; /* Limita la altura máxima del modal */
+    overflow-y: auto; /* Agrega un deslizador vertical si el contenido es demasiado largo */
+    position: relative;
+}
 /* Estilos para la sección de Calificaciones y Comentarios */
 .calificaciones {
     padding: 40px 20px;
