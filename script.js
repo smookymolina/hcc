@@ -21,9 +21,11 @@ if (estrellas && inputCalificacion) {
 
 // Manejo del formulario de calificaciones
 const formularioCalificaciones = document.getElementById("formulario-calificaciones");
+const mensajeExito = document.getElementById("mensaje-exito");
+
 if (formularioCalificaciones) {
     formularioCalificaciones.addEventListener("submit", function (event) {
-        event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+        event.preventDefault(); // Evita que el formulario se envíe
 
         // Validar que se haya seleccionado una calificación
         if (!inputCalificacion.value) {
@@ -31,32 +33,16 @@ if (formularioCalificaciones) {
             return;
         }
 
-        // Obtener los datos del formulario
-        const formData = new FormData(formularioCalificaciones);
+        // Mostrar mensaje de éxito
+        mensajeExito.style.display = "block";
 
-        // Enviar los datos a Formspree
-        fetch("https://formspree.io/f/mbldeyka", {
-            method: "POST",
-            body: formData,
-            headers: {
-                Accept: "application/json",
-            },
-        })
-            .then((response) => {
-                if (response.ok) {
-                    alert("¡Gracias por tu calificación y comentario!");
-                    formularioCalificaciones.reset(); // Limpiar el formulario
-                    // Limpiar las estrellas seleccionadas
-                    estrellas.forEach((e) => e.classList.remove("active"));
-                    inputCalificacion.value = "";
-                } else {
-                    alert("Hubo un error al enviar tu calificación. Inténtalo de nuevo.");
-                }
-            })
-            .catch((error) => {
-                console.error("Error:", error);
-                alert("Hubo un error al enviar tu calificación. Inténtalo de nuevo.");
-            });
+        // Limpiar el formulario después de 2 segundos
+        setTimeout(() => {
+            formularioCalificaciones.reset();
+            estrellas.forEach((e) => e.classList.remove("active"));
+            inputCalificacion.value = "";
+            mensajeExito.style.display = "none";
+        }, 2000);
     });
 }
 // Manejo del modal de subir CV
