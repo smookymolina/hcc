@@ -71,6 +71,32 @@ if (formularioSubirCV) {
     });
 }
 
+// Manejo del modal de Crear CV
+const btnCrearCV = document.getElementById("btn-crear-cv");
+const modalCrearCV = document.getElementById("modal-crear-cv");
+const closeModalCrearCV = modalCrearCV.querySelector(".close");
+
+// Abrir el modal al hacer clic en el botón "Crear CV"
+if (btnCrearCV) {
+    btnCrearCV.addEventListener("click", function () {
+        modalCrearCV.style.display = "flex";
+    });
+}
+
+// Cerrar el modal al hacer clic en la "X"
+if (closeModalCrearCV) {
+    closeModalCrearCV.addEventListener("click", function () {
+        modalCrearCV.style.display = "none";
+    });
+}
+
+// Cerrar el modal al hacer clic fuera del contenido del modal
+window.addEventListener("click", function (event) {
+    if (event.target === modalCrearCV) {
+        modalCrearCV.style.display = "none";
+    }
+});
+
 // Funcionalidad para los botones de "Más información"
 const botonesMasInfo = document.querySelectorAll(".btn-mas-info");
 if (botonesMasInfo) {
