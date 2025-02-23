@@ -1,3 +1,64 @@
+// Manejo de la selección de estrellas
+const estrellas = document.querySelectorAll(".estrellas .estrella");
+const inputCalificacion = document.getElementById("calificacion");
+
+if (estrellas && inputCalificacion) {
+    estrellas.forEach((estrella) => {
+        estrella.addEventListener("click", function () {
+            const valor = this.getAttribute("data-value");
+            inputCalificacion.value = valor;
+
+            // Remover la clase 'active' de todas las estrellas
+            estrellas.forEach((e) => e.classList.remove("active"));
+
+            // Agregar la clase 'active' a las estrellas seleccionadas
+            for (let i = 0; i < valor; i++) {
+                estrellas[i].classList.add("active");
+            }
+        });
+    });
+}
+
+// Manejo del formulario de calificaciones
+const formularioCalificaciones = document.getElementById("formulario-calificaciones");
+if (formularioCalificaciones) {
+    formularioCalificaciones.addEventListener("submit", function (event) {
+        event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+
+        // Validar que se haya seleccionado una calificación
+        if (!inputCalificacion.value) {
+            alert("Por favor, selecciona una calificación.");
+            return;
+        }
+
+        // Obtener los datos del formulario
+        const formData = new FormData(formularioCalificaciones);
+
+        // Enviar los datos a Formspree
+        fetch("https://formspree.io/f/mbldeyka", {
+            method: "POST",
+            body: formData,
+            headers: {
+                Accept: "application/json",
+            },
+        })
+            .then((response) => {
+                if (response.ok) {
+                    alert("¡Gracias por tu calificación y comentario!");
+                    formularioCalificaciones.reset(); // Limpiar el formulario
+                    // Limpiar las estrellas seleccionadas
+                    estrellas.forEach((e) => e.classList.remove("active"));
+                    inputCalificacion.value = "";
+                } else {
+                    alert("Hubo un error al enviar tu calificación. Inténtalo de nuevo.");
+                }
+            })
+            .catch((error) => {
+                console.error("Error:", error);
+                alert("Hubo un error al enviar tu calificación. Inténtalo de nuevo.");
+            });
+    });
+}
 // Manejo del modal de subir CV
 const btnSubirCV = document.getElementById("btn-subir-cv");
 const modalSubirCV = document.getElementById("modal-subir-cv");
