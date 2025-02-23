@@ -1,3 +1,60 @@
+// Manejo del formulario de calificaciones
+const formularioCalificaciones = document.getElementById("formulario-calificaciones");
+const mensajeExito = document.getElementById("mensaje-exito");
+
+if (formularioCalificaciones) {
+    formularioCalificaciones.addEventListener("submit", function (event) {
+        event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+
+        // Validar que se haya seleccionado una calificación
+        if (!inputCalificacion.value) {
+            alert("Por favor, selecciona una calificación.");
+            return;
+        }
+
+        // Validar el correo electrónico
+        const emailInput = document.getElementById("email-calificacion");
+        const email = emailInput.value.trim();
+        const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+        if (!emailValido) {
+            alert("Por favor, ingresa un correo electrónico válido.");
+            return;
+        }
+
+        // Obtener los datos del formulario
+        const formData = new FormData(formularioCalificaciones);
+
+        // Enviar los datos a Formspree
+        fetch("https://formspree.io/f/xnnjyvzg", {
+            method: "POST",
+            body: formData,
+            headers: {
+                Accept: "application/json",
+            },
+        })
+            .then((response) => {
+                if (response.ok) {
+                    // Mostrar mensaje de éxito
+                    mensajeExito.style.display = "block";
+
+                    // Limpiar el formulario después de 2 segundos
+                    setTimeout(() => {
+                        formularioCalificaciones.reset();
+                        estrellas.forEach((e) => e.classList.remove("active"));
+                        inputCalificacion.value = "";
+                        mensajeExito.style.display = "none";
+                    }, 2000);
+                } else {
+                    alert("Hubo un error al enviar la calificación. Inténtalo de nuevo.");
+                }
+            })
+            .catch((error) => {
+                console.error("Error:", error);
+                alert("Hubo un error al enviar la calificación. Inténtalo de nuevo.");
+            });
+    });
+}
 // Manejo de la selección de estrellas
 const estrellas = document.querySelectorAll(".estrellas .estrella");
 const inputCalificacion = document.getElementById("calificacion");
