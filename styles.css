@@ -155,7 +155,7 @@ header .nav-links a:hover {
 
 /* Estilos para el modal */
 .modal {
-    display: none;
+    display: none; /* Oculto por defecto */
     position: fixed;
     top: 0;
     left: 0;
@@ -191,7 +191,6 @@ header .nav-links a:hover {
     margin-bottom: 20px;
     text-align: center;
 }
-
 /* Estilos para el formulario de subir CV */
 #formulario-subir-cv {
     display: flex;
