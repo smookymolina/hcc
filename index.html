@@ -422,7 +422,31 @@
             </div>
         </div>
     </section>
-
+<section id="calificaciones" class="calificaciones">
+    <h2>Calificaciones y Comentarios</h2>
+    <form id="formulario-calificaciones" action="https://formspree.io/f/mbldeyka" method="POST">
+        <div class="form-group">
+            <label for="nombre-calificacion">Nombre:</label>
+            <input type="text" id="nombre-calificacion" name="nombre" placeholder="Tu nombre" required>
+        </div>
+        <div class="form-group">
+            <label for="calificacion">Calificación:</label>
+            <div class="estrellas">
+                <span class="estrella" data-value="1">&#9733;</span>
+                <span class="estrella" data-value="2">&#9733;</span>
+                <span class="estrella" data-value="3">&#9733;</span>
+                <span class="estrella" data-value="4">&#9733;</span>
+                <span class="estrella" data-value="5">&#9733;</span>
+            </div>
+            <input type="hidden" id="calificacion" name="calificacion" required>
+        </div>
+        <div class="form-group">
+            <label for="comentario">Comentario:</label>
+            <textarea id="comentario" name="comentario" placeholder="Escribe tu comentario aquí..." required></textarea>
+        </div>
+        <button type="submit" class="btn-enviar">Enviar</button>
+    </form>
+</section>
     <section id="contacto" class="contacto">
         <h2>Contacto</h2>
         <div class="quienes-somos">
