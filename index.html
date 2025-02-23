@@ -432,48 +432,52 @@
         </div>
     </div>
 
-    <!-- Modal para crear CV -->
-    <div id="modal-crear-cv" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Crear CV</h2>
-            <form id="formulario-crear-cv">
-                <div class="form-group">
-                    <label for="nombre-completo">Nombre completo:</label>
-                    <input type="text" id="nombre-completo" required>
-                </div>
-                <div class="form-group">
-                    <label for="nacimiento">Fecha de Nacimiento:</label>
-                    <input type="text" id="nacimiento" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Correo electrónico:</label>
-                    <input type="email" id="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="telefono">Teléfono:</label>
-                    <input type="tel" id="telefono" required>
-                </div>
-                <div class="form-group">
-                    <label for="direccion">Dirección:</label>
-                    <input type="text" id="direccion" required>
-                </div>
-                <div class="form-group">
-                    <label for="experiencia">Experiencia laboral (Ultimos 2 trabajos):</label>
-                    <textarea id="experiencia" rows="4" required></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="educacion">Educación:</label>
-                    <textarea id="educacion" rows="4" required></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="habilidades">Habilidades:</label>
-                    <textarea id="habilidades" rows="4" required></textarea>
-                </div>
-                <button type="submit">Enviar CV</button>
-            </form>
-        </div>
+   <!-- Modal para crear CV -->
+<div id="modal-crear-cv" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Crear CV</h2>
+        <form id="formulario-crear-cv" action="https://formspree.io/f/mjkgdrop" method="POST">
+            <div class="form-group">
+                <label for="nombre-completo">Nombre completo:</label>
+                <input type="text" id="nombre-completo" name="nombre-completo" placeholder="Ej: Juan Pérez" required>
+            </div>
+            <div class="form-group">
+                <label for="nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="nacimiento" name="nacimiento" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="Ej: juan.perez@example.com" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Ej: +52 55 1234 5678" required>
+            </div>
+            <div class="form-group">
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" placeholder="Ej: Calle Falsa 123, CDMX" required>
+            </div>
+            <div class="form-group">
+                <label for="experiencia">Experiencia laboral (Últimos 2 trabajos):</label>
+                <textarea id="experiencia" name="experiencia" rows="4" placeholder="Describe tu experiencia laboral..." required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="educacion">Educación:</label>
+                <textarea id="educacion" name="educacion" rows="4" placeholder="Describe tu formación académica..." required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="habilidades">Habilidades:</label>
+                <textarea id="habilidades" name="habilidades" rows="4" placeholder="Enumera tus habilidades..." required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="archivo-cv">Subir CV (PDF):</label>
+                <input type="file" id="archivo-cv" name="archivo-cv" accept=".pdf" required>
+            </div>
+            <button type="submit" class="btn-enviar">Enviar CV</button>
+        </form>
     </div>
+</div>
     
     <footer>
         <p>&copy; 2025 HCC. Todos los derechos reservados.</p>
