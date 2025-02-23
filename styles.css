@@ -1,3 +1,55 @@
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-right: 10px;
+}
+
+.modal-content .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.modal-content label {
+    font-size: 16px;
+    color: #0077b6;
+    font-weight: bold;
+}
+
+.modal-content input,
+.modal-content textarea,
+.modal-content select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    background: #f9f9f9;
+    transition: border-color 0.3s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.modal-content textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.modal-content .btn-enviar {
+    background: #0077b6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.modal-content .btn-enviar:hover {
+    background: #00b4d8;
+}
 .modal-content {
     background: white;
     padding: 30px;
