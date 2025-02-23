@@ -184,6 +184,7 @@ header .nav-links a:hover {
     cursor: pointer;
     color: #333;
 }
+
 /* Estilos para el formulario de subir CV */
 #formulario-subir-cv {
     display: flex;
