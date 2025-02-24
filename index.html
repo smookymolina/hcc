@@ -69,21 +69,21 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2>Subir CV</h2>
-<form id="formulario-subir-cv" action="https://formspree.io/f/mkgoabpj" method="POST" enctype="multipart/form-data">
-    <div class="form-group">
-        <label for="nombre">Nombre completo:</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez López" required>
-    </div>
-    <div class="form-group">
-        <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" name="email" placeholder="Ej: juan.perez@example.com" required>
-    </div>
-    <div class="form-group">
-        <label for="archivo-cv">Subir CV (PDF):</label>
-        <input type="file" id="archivo-cv" name="upload" accept=".pdf" required>
-    </div>
-    <button type="submit" class="btn-enviar">Enviar CV</button>
-</form>
+            <form id="formulario-subir-cv" action="https://formspree.io/f/mkgoabpj" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez López" autocomplete="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="Ej: juan.perez@example.com" autocomplete="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="archivo-cv">Subir CV (PDF):</label>
+                    <input type="file" id="archivo-cv" name="upload" accept=".pdf" required>
+                </div>
+                <button type="submit" class="btn-enviar">Enviar CV</button>
+            </form>
         </div>
     </div>
 
@@ -96,31 +96,31 @@
                 <!-- Nombre -->
                 <div class="form-group">
                     <label for="nombre-crear">Nombre:</label>
-                    <input type="text" id="nombre-crear" name="nombre" placeholder="Ej: Juan" required>
+                    <input type="text" id="nombre-crear" name="nombre" placeholder="Ej: Juan" autocomplete="given-name" required>
                 </div>
 
                 <!-- Apellidos -->
                 <div class="form-group">
                     <label for="apellidos-crear">Apellidos:</label>
-                    <input type="text" id="apellidos-crear" name="apellidos" placeholder="Ej: Pérez López" required>
+                    <input type="text" id="apellidos-crear" name="apellidos" placeholder="Ej: Pérez López" autocomplete="family-name" required>
                 </div>
 
                 <!-- Correo electrónico -->
                 <div class="form-group">
                     <label for="email-crear">Correo electrónico:</label>
-                    <input type="email" id="email-crear" name="email" placeholder="Ej: juan.perez@example.com" required>
+                    <input type="email" id="email-crear" name="email" placeholder="Ej: juan.perez@example.com" autocomplete="email" required>
                 </div>
 
                 <!-- Teléfono -->
                 <div class="form-group">
                     <label for="telefono-crear">Teléfono:</label>
-                    <input type="tel" id="telefono-crear" name="telefono" placeholder="Ej: 555-123-4567" required>
+                    <input type="tel" id="telefono-crear" name="telefono" placeholder="Ej: 555-123-4567" autocomplete="tel" required>
                 </div>
 
                 <!-- Dirección -->
                 <div class="form-group">
                     <label for="direccion-crear">Dirección:</label>
-                    <input type="text" id="direccion-crear" name="direccion" placeholder="Ej: Calle Falsa 123, CDMX" required>
+                    <input type="text" id="direccion-crear" name="direccion" placeholder="Ej: Calle Falsa 123, CDMX" autocomplete="address-line1" required>
                 </div>
 
                 <!-- Experiencia laboral -->
@@ -423,100 +423,100 @@
         </div>
     </section>
     
-<section id="calificaciones" class="calificaciones">
-    <h2>Calificaciones y Comentarios</h2>
-    <form id="formulario-calificaciones">
-        <div class="form-group">
-            <label for="nombre-calificacion">Nombre:</label>
-            <input type="text" id="nombre-calificacion" name="nombre" placeholder="Tu nombre" required>
-        </div>
-        <div class="form-group">
-            <label for="email-calificacion">Correo electrónico:</label>
-            <input type="email" id="email-calificacion" name="email" placeholder="Tu correo electrónico" required>
-        </div>
-        <div class="form-group">
-            <label for="calificacion">Calificación:</label>
-            <div class="estrellas">
-                <span class="estrella" data-value="1">&#9733;</span>
-                <span class="estrella" data-value="2">&#9733;</span>
-                <span class="estrella" data-value="3">&#9733;</span>
-                <span class="estrella" data-value="4">&#9733;</span>
-                <span class="estrella" data-value="5">&#9733;</span>
+    <section id="calificaciones" class="calificaciones">
+        <h2>Calificaciones y Comentarios</h2>
+        <form id="formulario-calificaciones">
+            <div class="form-group">
+                <label for="nombre-calificacion">Nombre:</label>
+                <input type="text" id="nombre-calificacion" name="nombre" placeholder="Tu nombre" required>
             </div>
-            <input type="hidden" id="calificacion" name="calificacion" required>
+            <div class="form-group">
+                <label for="email-calificacion">Correo electrónico:</label>
+                <input type="email" id="email-calificacion" name="email" placeholder="Tu correo electrónico" required>
+            </div>
+            <div class="form-group">
+                <label for="calificacion">Calificación:</label>
+                <div class="estrellas">
+                    <span class="estrella" data-value="1">&#9733;</span>
+                    <span class="estrella" data-value="2">&#9733;</span>
+                    <span class="estrella" data-value="3">&#9733;</span>
+                    <span class="estrella" data-value="4">&#9733;</span>
+                    <span class="estrella" data-value="5">&#9733;</span>
+                </div>
+                <input type="hidden" id="calificacion" name="calificacion" required>
+            </div>
+            <div class="form-group">
+                <label for="comentario">Comentario:</label>
+                <textarea id="comentario" name="comentario" placeholder="Escribe tu comentario aquí..." required></textarea>
+            </div>
+            <button type="submit" class="btn-enviar">Enviar</button>
+        </form>
+        <div id="mensaje-exito" class="mensaje-exito" style="display: none;">
+            ¡Gracias por tu calificación y comentario!
         </div>
-        <div class="form-group">
-            <label for="comentario">Comentario:</label>
-            <textarea id="comentario" name="comentario" placeholder="Escribe tu comentario aquí..." required></textarea>
-        </div>
-        <button type="submit" class="btn-enviar">Enviar</button>
-    </form>
-    <div id="mensaje-exito" class="mensaje-exito" style="display: none;">
-        ¡Gracias por tu calificación y comentario!
-    </div>
 
-    <!-- Ejemplos de comentarios estilo red social -->
-    <div class="comentarios-ejemplo">
-        <h3>Comentarios recientes</h3>
-        <div class="comentario-item">
-            <div class="comentario-header">
-                <img src="images/muusu.png" alt="Avatar" class="avatar">
-                <div class="comentario-info">
-                    <span class="nombre">María González</span>
-                    <span class="fecha">Hace 2 horas</span>
+        <!-- Ejemplos de comentarios estilo red social -->
+        <div class="comentarios-ejemplo">
+            <h3>Comentarios recientes</h3>
+            <div class="comentario-item">
+                <div class="comentario-header">
+                    <img src="images/muusu.png" alt="Avatar" class="avatar">
+                    <div class="comentario-info">
+                        <span class="nombre">María González</span>
+                        <span class="fecha">Hace 2 horas</span>
+                    </div>
+                </div>
+                <div class="comentario-body">
+                    <div class="estrellas">
+                        <span class="estrella active">&#9733;</span>
+                        <span class="estrella active">&#9733;</span>
+                        <span class="estrella active">&#9733;</span>
+                        <span class="estrella active">&#9733;</span>
+                        <span class="estrella active">&#9733;</span>
+                    </div>
+                    <p class="comentario-texto">Excelente servicio, muy profesionales y atentos. ¡Los recomiendo!</p>
                 </div>
             </div>
-            <div class="comentario-body">
-                <div class="estrellas">
-                    <span class="estrella active">&#9733;</span>
-                    <span class="estrella active">&#9733;</span>
-                    <span class="estrella active">&#9733;</span>
-                    <span class="estrella active">&#9733;</span>
-                    <span class="estrella active">&#9733;</span>
+            <div class="comentario-item">
+                <div class="comentario-header">
+                    <img src="images/homusu.png" alt="Avatar" class="avatar">
+                    <div class="comentario-info">
+                        <span class="nombre">Carlos Martínez</span>
+                        <span class="fecha">Hace 1 día</span>
+                    </div>
                 </div>
-                <p class="comentario-texto">Excelente servicio, muy profesionales y atentos. ¡Los recomiendo!</p>
+                <div class="comentario-body">
+                    <div class="estrellas">
+                        <span class="estrella active">&#9733;</span>
+                        <span class="estrella active">&#9733;</span>
+                        <span class="estrella active">&#9733;</span>
+                        <span class="estrella active">&#9733;</span>
+                        <span class="estrella">&#9733;</span>
+                    </div>
+                    <p class="comentario-texto">Muy buena experiencia, aunque el tiempo de espera fue un poco largo.</p>
+                </div>
+            </div>
+            <div class="comentario-item">
+                <div class="comentario-header">
+                    <img src="images/muusu.png" alt="Avatar" class="avatar">
+                    <div class="comentario-info">
+                        <span class="nombre">Ana López</span>
+                        <span class="fecha">Hace 3 días</span>
+                    </div>
+                </div>
+                <div class="comentario-body">
+                    <div class="estrellas">
+                        <span class="estrella active">&#9733;</span>
+                        <span class="estrella active">&#9733;</span>
+                        <span class="estrella active">&#9733;</span>
+                        <span class="estrella">&#9733;</span>
+                        <span class="estrella">&#9733;</span>
+                    </div>
+                    <p class="comentario-texto">Buen servicio, pero podrían mejorar en la atención al cliente.</p>
+                </div>
             </div>
         </div>
-        <div class="comentario-item">
-            <div class="comentario-header">
-                <img src="images/homusu.png" alt="Avatar" class="avatar">
-                <div class="comentario-info">
-                    <span class="nombre">Carlos Martínez</span>
-                    <span class="fecha">Hace 1 día</span>
-                </div>
-            </div>
-            <div class="comentario-body">
-                <div class="estrellas">
-                    <span class="estrella active">&#9733;</span>
-                    <span class="estrella active">&#9733;</span>
-                    <span class="estrella active">&#9733;</span>
-                    <span class="estrella active">&#9733;</span>
-                    <span class="estrella">&#9733;</span>
-                </div>
-                <p class="comentario-texto">Muy buena experiencia, aunque el tiempo de espera fue un poco largo.</p>
-            </div>
-        </div>
-        <div class="comentario-item">
-            <div class="comentario-header">
-                <img src="images/muusu.png" alt="Avatar" class="avatar">
-                <div class="comentario-info">
-                    <span class="nombre">Ana López</span>
-                    <span class="fecha">Hace 3 días</span>
-                </div>
-            </div>
-            <div class="comentario-body">
-                <div class="estrellas">
-                    <span class="estrella active">&#9733;</span>
-                    <span class="estrella active">&#9733;</span>
-                    <span class="estrella active">&#9733;</span>
-                    <span class="estrella">&#9733;</span>
-                    <span class="estrella">&#9733;</span>
-                </div>
-                <p class="comentario-texto">Buen servicio, pero podrían mejorar en la atención al cliente.</p>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
     
     <section id="contacto" class="contacto">
         <h2>Contacto</h2>
