@@ -24,14 +24,14 @@ window.addEventListener("click", function (event) {
     }
 });
 
-// Manejo del formulario de subir CV
+// Manejo del formulario de subir archivo
 const formularioSubirCV = document.getElementById("formulario-subir-cv");
 if (formularioSubirCV) {
     formularioSubirCV.addEventListener("submit", function (event) {
         event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
 
         // Validar el formato del archivo
-        const fileInput = document.getElementById("archivo-cv");
+        const fileInput = document.getElementById("archivo");
         const file = fileInput.files[0];
         if (file && !file.type.includes('pdf')) {
             alert("Por favor, sube solo archivos PDF.");
@@ -57,16 +57,15 @@ if (formularioSubirCV) {
         })
             .then((response) => {
                 if (response.ok) {
-                    alert("¡CV enviado con éxito!");
+                    alert("¡Archivo enviado con éxito!");
                     formularioSubirCV.reset(); // Limpiar el formulario
-                    modalSubirCV.style.display = "none"; // Cerrar el modal
                 } else {
-                    alert("Hubo un error al enviar el CV. Inténtalo de nuevo.");
+                    alert("Hubo un error al enviar el archivo. Inténtalo de nuevo.");
                 }
             })
             .catch((error) => {
                 console.error("Error:", error);
-                alert("Hubo un error al enviar el CV. Inténtalo de nuevo.");
+                alert("Hubo un error al enviar el archivo. Inténtalo de nuevo.");
             });
     });
 }
