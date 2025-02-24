@@ -1,3 +1,63 @@
+// Manejo del modal de Capturista de Datos
+const botonesCapturista = document.querySelectorAll(".btn-aplicar[data-vacante='capturista']");
+const modalCapturista = document.getElementById("modal-capturista");
+const closeModalCapturista = modalCapturista ? modalCapturista.querySelector(".close") : null;
+
+// Abrir el modal al hacer clic en el botón "Aplicar ahora" para Capturista de Datos
+if (botonesCapturista && modalCapturista) {
+    botonesCapturista.forEach((button) => {
+        button.addEventListener("click", function () {
+            modalCapturista.style.display = "flex";
+        });
+    });
+}
+
+// Cerrar el modal al hacer clic en la "X"
+if (closeModalCapturista) {
+    closeModalCapturista.addEventListener("click", function () {
+        modalCapturista.style.display = "none";
+    });
+}
+
+// Cerrar el modal al hacer clic fuera del contenido del modal
+window.addEventListener("click", function (event) {
+    if (modalCapturista && event.target === modalCapturista) {
+        modalCapturista.style.display = "none";
+    }
+});
+
+// Manejo del formulario de Capturista de Datos
+const formularioCapturista = document.getElementById("formulario-capturista");
+if (formularioCapturista) {
+    formularioCapturista.addEventListener("submit", function (event) {
+        event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+
+        // Obtener los datos del formulario
+        const formData = new FormData(formularioCapturista);
+
+        // Enviar los datos a Formspree
+        fetch("https://formspree.io/f/mqaevqnp", {
+            method: "POST",
+            body: formData,
+            headers: {
+                Accept: "application/json",
+            },
+        })
+            .then((response) => {
+                if (response.ok) {
+                    alert("¡Solicitud enviada con éxito!");
+                    formularioCapturista.reset(); // Limpiar el formulario
+                    modalCapturista.style.display = "none"; // Cerrar el modal
+                } else {
+                    alert("Hubo un error al enviar la solicitud. Inténtalo de nuevo.");
+                }
+            })
+            .catch((error) => {
+                console.error("Error:", error);
+                alert("Hubo un error al enviar la solicitud. Inténtalo de nuevo.");
+            });
+    });
+}
 // Manejo del modal de Aplicar Ahora
 const botonesAplicar = document.querySelectorAll(".btn-aplicar");
 const modalAplicar = document.getElementById("modal-aplicar");
