@@ -1,8 +1,7 @@
-// Declaración de variables (solo una vez)
+// Manejo del modal de subir CV
 const btnSubirCV = document.getElementById("btn-subir-cv");
 const modalSubirCV = document.getElementById("modal-subir-cv");
 const closeModalSubirCV = modalSubirCV ? modalSubirCV.querySelector(".close") : null;
-const formularioSubirCV = document.getElementById("formulario-subir-cv");
 
 // Abrir el modal al hacer clic en el botón "Subir CV"
 if (btnSubirCV && modalSubirCV) {
@@ -26,6 +25,7 @@ window.addEventListener("click", function (event) {
 });
 
 // Manejo del formulario de subir CV
+const formularioSubirCV = document.getElementById("formulario-subir-cv");
 if (formularioSubirCV) {
     formularioSubirCV.addEventListener("submit", function (event) {
         event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
@@ -165,7 +165,7 @@ if (formularioCrearCV) {
         const formData = new FormData(formularioCrearCV);
 
         // Enviar los datos a Formspree
-        fetch("https://formspree.io/f/{tu_endpoint_aqui}", {  // Reemplaza con tu endpoint de Formspree
+        fetch("https://formspree.io/f/mkgoabpj", {  // Reemplaza con tu endpoint de Formspree
             method: "POST",
             body: formData,
             headers: {
