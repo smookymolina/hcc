@@ -269,6 +269,37 @@
                 </div>
             </div>
 
+         <!-- Modal para Capturista de Datos -->
+<div id="modal-capturista" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Aplicar a Capturista de Datos</h2>
+        <form id="formulario-capturista" action="https://formspree.io/f/mqaevqnp" method="POST">
+            <div class="form-group">
+                <label for="nombre-capturista">Nombre completo:</label>
+                <input type="text" id="nombre-capturista" name="nombre" placeholder="Ej: María López García" required>
+            </div>
+            <div class="form-group">
+                <label for="email-capturista">Correo electrónico:</label>
+                <input type="email" id="email-capturista" name="email" placeholder="Ej: maria.lopez@example.com" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono-capturista">Teléfono:</label>
+                <input type="tel" id="telefono-capturista" name="telefono" placeholder="Ej: 555-987-6543" required>
+            </div>
+            <div class="form-group">
+                <label for="experiencia-capturista">Experiencia en captura de datos:</label>
+                <textarea id="experiencia-capturista" name="experiencia" placeholder="Describe tu experiencia en captura de datos" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="habilidades-capturista">Habilidades técnicas:</label>
+                <textarea id="habilidades-capturista" name="habilidades" placeholder="Ej: Manejo de Excel, bases de datos, etc." required></textarea>
+            </div>
+            <button type="submit" class="btn-enviar">Enviar solicitud</button>
+        </form>
+    </div>
+</div>   
+
             <!-- Vacante 3: Auxiliar de Recursos Humanos -->
             <div id="vacante3" class="vacante-item">
                 <div class="vacante-header">
