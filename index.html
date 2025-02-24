@@ -195,7 +195,36 @@
                     </ul>
                 </div>
             </div>
-
+<!-- Modal para Aplicar Ahora -->
+<div id="modal-aplicar" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Aplicar a Asesor de Telemarketing</h2>
+        <form id="formulario-aplicar" action="https://formspree.io/f/xeoebgvl" method="POST">
+            <div class="form-group">
+                <label for="nombre-aplicar">Nombre completo:</label>
+                <input type="text" id="nombre-aplicar" name="nombre" placeholder="Ej: Juan Pérez López" required>
+            </div>
+            <div class="form-group">
+                <label for="email-aplicar">Correo electrónico:</label>
+                <input type="email" id="email-aplicar" name="email" placeholder="Ej: juan.perez@example.com" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono-aplicar">Teléfono:</label>
+                <input type="tel" id="telefono-aplicar" name="telefono" placeholder="Ej: 555-123-4567" required>
+            </div>
+            <div class="form-group">
+                <label for="experiencia-aplicar">Experiencia laboral:</label>
+                <textarea id="experiencia-aplicar" name="experiencia" placeholder="Describe tu experiencia laboral" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="mensaje-aplicar">Mensaje adicional:</label>
+                <textarea id="mensaje-aplicar" name="mensaje" placeholder="Escribe un mensaje adicional si lo deseas"></textarea>
+            </div>
+            <button type="submit" class="btn-enviar">Enviar solicitud</button>
+        </form>
+    </div>
+</div>
             <!-- Vacante 2: Capturista de Datos -->
             <div id="vacante2" class="vacante-item">
                 <div class="vacante-header">
