@@ -1,3 +1,63 @@
+// Manejo del modal de Aplicar Ahora
+const botonesAplicar = document.querySelectorAll(".btn-aplicar");
+const modalAplicar = document.getElementById("modal-aplicar");
+const closeModalAplicar = modalAplicar ? modalAplicar.querySelector(".close") : null;
+
+// Abrir el modal al hacer clic en el botón "Aplicar ahora"
+if (botonesAplicar && modalAplicar) {
+    botonesAplicar.forEach((button) => {
+        button.addEventListener("click", function () {
+            modalAplicar.style.display = "flex";
+        });
+    });
+}
+
+// Cerrar el modal al hacer clic en la "X"
+if (closeModalAplicar) {
+    closeModalAplicar.addEventListener("click", function () {
+        modalAplicar.style.display = "none";
+    });
+}
+
+// Cerrar el modal al hacer clic fuera del contenido del modal
+window.addEventListener("click", function (event) {
+    if (modalAplicar && event.target === modalAplicar) {
+        modalAplicar.style.display = "none";
+    }
+});
+
+// Manejo del formulario de Aplicar
+const formularioAplicar = document.getElementById("formulario-aplicar");
+if (formularioAplicar) {
+    formularioAplicar.addEventListener("submit", function (event) {
+        event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+
+        // Obtener los datos del formulario
+        const formData = new FormData(formularioAplicar);
+
+        // Enviar los datos a Formspree
+        fetch("https://formspree.io/f/xeoebgvl", {
+            method: "POST",
+            body: formData,
+            headers: {
+                Accept: "application/json",
+            },
+        })
+            .then((response) => {
+                if (response.ok) {
+                    alert("¡Solicitud enviada con éxito!");
+                    formularioAplicar.reset(); // Limpiar el formulario
+                    modalAplicar.style.display = "none"; // Cerrar el modal
+                } else {
+                    alert("Hubo un error al enviar la solicitud. Inténtalo de nuevo.");
+                }
+            })
+            .catch((error) => {
+                console.error("Error:", error);
+                alert("Hubo un error al enviar la solicitud. Inténtalo de nuevo.");
+            });
+    });
+}
 // Manejo de la selección de estrellas
 const estrellas = document.querySelectorAll(".estrellas .estrella");
 const inputCalificacion = document.getElementById("calificacion");
