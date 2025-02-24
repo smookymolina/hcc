@@ -1,75 +1,3 @@
-// Manejo del modal de subir CV
-const btnSubirCV = document.getElementById("btn-subir-cv");
-const modalSubirCV = document.getElementById("modal-subir-cv");
-const closeModalSubirCV = modalSubirCV ? modalSubirCV.querySelector(".close") : null;
-
-// Abrir el modal al hacer clic en el botón "Subir CV"
-if (btnSubirCV && modalSubirCV) {
-    btnSubirCV.addEventListener("click", function () {
-        modalSubirCV.style.display = "flex";
-    });
-}
-
-// Cerrar el modal al hacer clic en la "X"
-if (closeModalSubirCV) {
-    closeModalSubirCV.addEventListener("click", function () {
-        modalSubirCV.style.display = "none";
-    });
-}
-
-// Cerrar el modal al hacer clic fuera del contenido del modal
-window.addEventListener("click", function (event) {
-    if (modalSubirCV && event.target === modalSubirCV) {
-        modalSubirCV.style.display = "none";
-    }
-});
-
-// Manejo del formulario de subir archivo
-const formularioSubirCV = document.getElementById("formulario-subir-cv");
-if (formularioSubirCV) {
-    formularioSubirCV.addEventListener("submit", function (event) {
-        event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
-
-        // Validar el formato del archivo
-        const fileInput = document.getElementById("archivo");
-        const file = fileInput.files[0];
-        if (file && !file.type.includes('pdf')) {
-            alert("Por favor, sube solo archivos PDF.");
-            return;
-        }
-
-        // Validar el tamaño del archivo (máximo 5MB)
-        if (file && file.size > 5 * 1024 * 1024) {
-            alert("El archivo es demasiado grande. Por favor, sube un archivo menor a 5MB.");
-            return;
-        }
-
-        // Obtener los datos del formulario
-        const formData = new FormData(formularioSubirCV);
-
-        // Enviar los datos a Formspree
-        fetch("https://formspree.io/f/mkgoabpj", {
-            method: "POST",
-            body: formData,
-            headers: {
-                Accept: "application/json",
-            },
-        })
-            .then((response) => {
-                if (response.ok) {
-                    alert("¡Archivo enviado con éxito!");
-                    formularioSubirCV.reset(); // Limpiar el formulario
-                } else {
-                    alert("Hubo un error al enviar el archivo. Inténtalo de nuevo.");
-                }
-            })
-            .catch((error) => {
-                console.error("Error:", error);
-                alert("Hubo un error al enviar el archivo. Inténtalo de nuevo.");
-            });
-    });
-}
-
 // Manejo de la selección de estrellas
 const estrellas = document.querySelectorAll(".estrellas .estrella");
 const inputCalificacion = document.getElementById("calificacion");
@@ -127,6 +55,78 @@ if (formularioCalificaciones) {
         }, 2000);
     });
 }
+// Manejo del modal de subir CV
+const btnSubirCV = document.getElementById("btn-subir-cv");
+const modalSubirCV = document.getElementById("modal-subir-cv");
+const closeModalSubirCV = modalSubirCV ? modalSubirCV.querySelector(".close") : null;
+
+// Abrir el modal al hacer clic en el botón "Subir CV"
+if (btnSubirCV && modalSubirCV) {
+    btnSubirCV.addEventListener("click", function () {
+        modalSubirCV.style.display = "flex";
+    });
+}
+
+// Cerrar el modal al hacer clic en la "X"
+if (closeModalSubirCV) {
+    closeModalSubirCV.addEventListener("click", function () {
+        modalSubirCV.style.display = "none";
+    });
+}
+
+// Cerrar el modal al hacer clic fuera del contenido del modal
+window.addEventListener("click", function (event) {
+    if (modalSubirCV && event.target === modalSubirCV) {
+        modalSubirCV.style.display = "none";
+    }
+});
+
+// Manejo del formulario de subir CV
+const formularioSubirCV = document.getElementById("formulario-subir-cv");
+if (formularioSubirCV) {
+    formularioSubirCV.addEventListener("submit", function (event) {
+        event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+
+        // Validar el formato del archivo
+        const fileInput = document.getElementById("archivo-cv");
+        const file = fileInput.files[0];
+        if (file && !file.type.includes('pdf')) {
+            alert("Por favor, sube solo archivos PDF.");
+            return;
+        }
+
+        // Validar el tamaño del archivo (máximo 5MB)
+        if (file && file.size > 5 * 1024 * 1024) {
+            alert("El archivo es demasiado grande. Por favor, sube un archivo menor a 5MB.");
+            return;
+        }
+
+        // Obtener los datos del formulario
+        const formData = new FormData(formularioSubirCV);
+
+        // Enviar los datos a Formspree
+        fetch("https://formspree.io/f/mkgoabpj", {
+            method: "POST",
+            body: formData,
+            headers: {
+                Accept: "application/json",
+            },
+        })
+            .then((response) => {
+                if (response.ok) {
+                    alert("¡CV enviado con éxito!");
+                    formularioSubirCV.reset(); // Limpiar el formulario
+                    modalSubirCV.style.display = "none"; // Cerrar el modal
+                } else {
+                    alert("Hubo un error al enviar el CV. Inténtalo de nuevo.");
+                }
+            })
+            .catch((error) => {
+                console.error("Error:", error);
+                alert("Hubo un error al enviar el CV. Inténtalo de nuevo.");
+            });
+    });
+}
 
 // Manejo del modal de Crear CV
 const btnCrearCV = document.getElementById("btn-crear-cv");
@@ -153,7 +153,6 @@ window.addEventListener("click", function (event) {
         modalCrearCV.style.display = "none";
     }
 });
-
 // Manejo del formulario de Crear CV
 const formularioCrearCV = document.getElementById("formulario-crear-cv");
 if (formularioCrearCV) {
@@ -164,7 +163,7 @@ if (formularioCrearCV) {
         const formData = new FormData(formularioCrearCV);
 
         // Enviar los datos a Formspree
-        fetch("https://formspree.io/f/mkgoabpj", {  // Reemplaza con tu endpoint de Formspree
+        fetch("https://formspree.io/f/{tu_endpoint_aqui}", {  // Reemplaza con tu endpoint de Formspree
             method: "POST",
             body: formData,
             headers: {
