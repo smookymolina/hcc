@@ -163,7 +163,7 @@ if (formularioCrearCV) {
         const formData = new FormData(formularioCrearCV);
 
         // Enviar los datos a Formspree
-        fetch("https://formspree.io/f/{tu_endpoint_aqui}", {  // Reemplaza con tu endpoint de Formspree
+        fetch("https://formspree.io/f/mkgoabpj", {  // Reemplaza con tu endpoint de Formspree
             method: "POST",
             body: formData,
             headers: {
