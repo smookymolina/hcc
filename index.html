@@ -56,7 +56,7 @@
             </h1>
             <p>Únete a nosotros.</p>
             <div class="aplicar-ahora">
-                <!-- Botón para abrir el modal -->
+                <!-- Botones para abrir los modales -->
                 <button id="btn-subir-cv">Subir CV</button>
                 <button id="btn-crear-cv">Crear CV</button>
             </div>
@@ -72,11 +72,11 @@
             <form id="formulario-subir-cv" action="https://formspree.io/f/mkgoabpj" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="nombre">Nombre completo:</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez López" autocomplete="name" required>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez López" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Correo electrónico:</label>
-                    <input type="email" id="email" name="email" placeholder="Ej: juan.perez@example.com" autocomplete="email" required>
+                    <input type="email" id="email" name="email" placeholder="Ej: juan.perez@example.com" required>
                 </div>
                 <div class="form-group">
                     <label for="archivo-cv">Subir CV (PDF):</label>
@@ -92,24 +92,65 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2>Crear CV</h2>
-            <form
-  id="formulario-subir-cv"
-  action="https://formspree.io/f/mkgoabpj"
-  method="POST"
-  enctype="multipart/form-data"
->
-  <div class="form-group">
-    <label for="email">Tu correo electrónico:</label>
-    <input type="email" id="email" name="email" placeholder="Ej: juan.perez@example.com" required>
-  </div>
-  <div class="form-group">
-    <label for="archivo">Subir archivo (PDF):</label>
-    <input type="file" id="archivo" name="upload" accept=".pdf" required>
-  </div>
-  <button type="submit" class="btn-enviar">Enviar</button>
-</form>
+            <form id="formulario-crear-cv" action="https://formspree.io/f/mkgoabpj" method="POST">
+                <!-- Nombre -->
+                <div class="form-group">
+                    <label for="nombre-crear">Nombre:</label>
+                    <input type="text" id="nombre-crear" name="nombre" placeholder="Ej: Juan" required>
+                </div>
+
+                <!-- Apellidos -->
+                <div class="form-group">
+                    <label for="apellidos-crear">Apellidos:</label>
+                    <input type="text" id="apellidos-crear" name="apellidos" placeholder="Ej: Pérez López" required>
+                </div>
+
+                <!-- Correo electrónico -->
+                <div class="form-group">
+                    <label for="email-crear">Correo electrónico:</label>
+                    <input type="email" id="email-crear" name="email" placeholder="Ej: juan.perez@example.com" required>
+                </div>
+
+                <!-- Teléfono -->
+                <div class="form-group">
+                    <label for="telefono-crear">Teléfono:</label>
+                    <input type="tel" id="telefono-crear" name="telefono" placeholder="Ej: 555-123-4567" required>
+                </div>
+
+                <!-- Dirección -->
+                <div class="form-group">
+                    <label for="direccion-crear">Dirección:</label>
+                    <input type="text" id="direccion-crear" name="direccion" placeholder="Ej: Calle Falsa 123, CDMX" required>
+                </div>
+
+                <!-- Experiencia laboral -->
+                <div class="form-group">
+                    <label for="experiencia1">Experiencia laboral (último trabajo):</label>
+                    <textarea id="experiencia1" name="experiencia1" placeholder="Describe tu último trabajo" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="experiencia2">Experiencia laboral (penúltimo trabajo):</label>
+                    <textarea id="experiencia2" name="experiencia2" placeholder="Describe tu penúltimo trabajo"></textarea>
+                </div>
+
+                <!-- Educación -->
+                <div class="form-group">
+                    <label for="educacion">Educación:</label>
+                    <textarea id="educacion" name="educacion" placeholder="Ej: Licenciatura en Administración, Universidad XYZ" required></textarea>
+                </div>
+
+                <!-- Habilidades -->
+                <div class="form-group">
+                    <label for="habilidades">Habilidades:</label>
+                    <textarea id="habilidades" name="habilidades" placeholder="Ej: Trabajo en equipo, liderazgo, Excel avanzado" required></textarea>
+                </div>
+
+                <!-- Botón de enviar -->
+                <button type="submit" class="btn-enviar">Enviar CV</button>
+            </form>
         </div>
     </div>
+
     
     <section id="vacantes" class="vacantes">
         <h2>Vacantes disponibles</h2>
