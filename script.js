@@ -8,22 +8,22 @@ const modales = {
     capturista: {
         modal: document.getElementById("modal-capturista"),
         formulario: document.getElementById("formulario-capturista"),
-        endpoint: "https://formspree.io/f/mqaevqnp",
+        endpoint: "link",
     },
     rrhh: {
         modal: document.getElementById("modal-rrhh"),
         formulario: document.getElementById("formulario-rrhh"),
-        endpoint: "https://formspree.io/f/mgvojkdp",
+        endpoint: "link",
     },
     supervisor: {
         modal: document.getElementById("modal-supervisor"),
         formulario: document.getElementById("formulario-supervisor"),
-        endpoint: "https://formspree.io/f/mpwqgdbk",
+        endpoint: "link",
     },
     analista: {
         modal: document.getElementById("modal-analista"),
         formulario: document.getElementById("formulario-analista"),
-        endpoint: "https://formspree.io/f/mkgolryy",
+        endpoint: "link",
     },
 };
 
